@@ -6,7 +6,9 @@ const LoginPage = () => {
 
   return (
     <section>
-        <LoginForm />
+        {
+          //<LoginForm />
+        }
     </section>
   )
 }

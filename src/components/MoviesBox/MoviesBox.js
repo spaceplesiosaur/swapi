@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MovieCard from '../MovieCard/MovieCard';
-import './MovieBox.scss';
+import './MoviesBox.scss';
 
 export default class MovieBox extends Component {
   constructor() {
