@@ -7,7 +7,7 @@ import './MoviesPage.scss';
 const MoviesPage = () => {
 
   return (
-    <section>
+    <section className="moviePage">
       <section className="userProfile">
         <UserProfile />
       </section>

@@ -4,7 +4,7 @@ import './UserProfile.scss'
 const UserProfile = () => {
 
   return (
-    <section classname="user-profile">
+    <section className="user-profile">
       <img></img>
       <section>
         <h3></h3>
