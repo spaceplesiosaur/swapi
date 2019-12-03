@@ -1,0 +1,40 @@
+.movie-card {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(100, 149, 237, 0.9);
+  margin: 0 1em 0 1em;
+  padding: 0 2em 1em 2em;
+  width: 15em;
+}
+
+h3 {
+  font-size: 3em;
+  border-bottom: 1px black solid;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #5A2C05;
+}
+
+h4 {
+  font-size: 2em;
+  font-weight: normal;
+  padding: 0;
+  margin: .5em;
+  color: #5A2C05;
+}
+
+p {
+  font-size: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+button {
+  width: 232px;
+  height: 36px;
+  left: 351px;
+  top: 560px;
+  background-color: #F1AA61;
+  color: #5A2C05;
+  border: 1px solid #964809;
+  box-sizing: border-box;
+}

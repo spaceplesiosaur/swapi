@@ -3,11 +3,14 @@ import UserProfile from '../UserProfile/UserProfile';
 import MoviesBox from '../MoviesBox/MoviesBox';
 import './MoviesPage.scss';
 
+
 const MoviesPage = () => {
 
   return (
     <section>
-      <UserProfile />
+      <section className="userProfile">
+        <UserProfile />
+      </section>
       <h2>Star Wars Movies</h2>
       <MoviesBox />
     </section>

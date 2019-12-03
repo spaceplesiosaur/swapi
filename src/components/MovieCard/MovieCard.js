@@ -5,11 +5,10 @@ const MovieCard = () => {
 
   return (
     <section className="movie-card">
-      <h3></h3>
-      <div></div>
-      <h4></h4>
-      <p></p>
-      <button></button>
+      <h3>Episode I</h3>
+      <h4>The Phantom Menace</h4>
+      <p>1999</p>
+      <button>View characters</button>
     </section>
   )
 }

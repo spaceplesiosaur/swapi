@@ -5,14 +5,22 @@ import './MoviesBox.scss';
 export default class MovieBox extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      cards: []
+    }
+  }
+
+  getMovieInfo = () => {
+    return null
+  }
+  generateCards = () => {
+    return null
   }
 
   render() {
     return (
       <section className="movie-box">
-        <MovieCard />
-        {/* The above is a placeholder; this will be a const variable representing a mapping over the cards array   */}
+        {this.generateCards()}
       </section>
     )
   }
