@@ -6,10 +6,12 @@ import './CharactersPage.scss';
 const CharactersPage = () => {
 
   return (
-    <section className="charactersPage">
+    <section>
       <UserProfile />
       <h2></h2>
-      <section className= "introScroll"></section>
+      <section>
+        <p>{/* Dynamic text from API*/}</p>
+      </section>
       <CharacterBox />
     </section>
   )

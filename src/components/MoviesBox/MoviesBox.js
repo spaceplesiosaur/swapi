@@ -10,7 +10,7 @@ export default class MovieBox extends Component {
 
   render() {
     return (
-      <section className="movieBox">
+      <section className="movie-box">
         <MovieCard />
         {/* The above is a placeholder; this will be a const variable representing a mapping over the cards array   */}
       </section>

@@ -9,7 +9,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <main>
+      <main className="app">
         {/* Dynamic Page */}
       </main>
     )

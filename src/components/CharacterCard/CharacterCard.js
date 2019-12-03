@@ -4,20 +4,22 @@ import '/.CharacterCard.scss';
 const CharacterCard = () => {
 
   return (
-    <section className="characterCard">
-      <h3 className="characterName"></h3>
-      <img className="favoriteStar"></img>
-      <p className="characterSpecies"></p>
-      <div></div>
-      <section className="characterPlanetInfo">
-        <img className="planetIcon"></img>
-        <p className="planetName"></p>
-        <p className="planetPopulation"></p>
-      </section>
-      <h4 className="characterMoviesHeader"></h4>
+    <section className="character-card">
+      <header>
+        <h3></h3>
+        <img></img>
+        <p></p>
+      </header>
+      <section className="character-card-planet">
+      <div>
+        <p></p>
+        <p></p>
+      </div>
       <ul>
+        <h4 className="character-movies-header"></h4>
         {/* Movie list placeholder*/}
       </ul>
+      </section>
     </section>
   )
 }

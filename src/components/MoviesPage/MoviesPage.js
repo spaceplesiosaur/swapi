@@ -6,7 +6,7 @@ import './MoviesPage.scss';
 const MoviesPage = () => {
 
   return (
-    <section className="moviesPage">
+    <section>
       <UserProfile />
       <h2>Star Wars Movies</h2>
       <MoviesBox />

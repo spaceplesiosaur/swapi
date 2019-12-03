@@ -5,7 +5,7 @@ import './LoginPage.scss';
 const LoginPage = () => {
 
   return (
-    <section className="loginPage">
+    <section>
         <LoginForm />
     </section>
   )

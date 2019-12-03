@@ -10,7 +10,7 @@ export default class CharacterBox extends Component {
 
   render() {
     return (
-      <section className="characterBox">
+      <section className="character-box">
         <CharacterCard />
         {/* The above is a placeholder; this will be a const variable representing a mapping over the cards array   */}
       </section>

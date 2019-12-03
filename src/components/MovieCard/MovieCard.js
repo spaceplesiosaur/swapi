@@ -4,11 +4,11 @@ import '/.MovieCard.scss';
 const MovieCard = () => {
 
   return (
-    <section className="movieCard">
-      <h3 className="movieEpisode"></h3>
+    <section className="movie-card">
+      <h3></h3>
       <div></div>
-      <h4 className="movieTitle"></h4>
-      <p className="movieYear"></p>
+      <h4></h4>
+      <p></p>
       <button></button>
     </section>
   )

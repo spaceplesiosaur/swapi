@@ -4,14 +4,14 @@ import './UserProfile.scss'
 const UserProfile = () => {
 
   return (
-    <section classname="userProfile">
+    <section classname="user-profile">
       <img></img>
-      <section className="profileInfo"
-        <h3 className="userName"></h3>
-        <p className="userLevel"></p>
-        <p className="userQuote"></p>
+      <section>
+        <h3></h3>
+        <p></p>
+        <p></p>
       </section>
-      <input type="radio"></input>
+      <button></button>
     </section>
   )
 }

@@ -9,17 +9,17 @@ export default class LoginForm extends Component {
 
   render() {
     return (
-      <form className="loginForm">
-        <h1 className="loginHeader">SWAPI Trivia</h1>
-        <section className="nameInputAndLabel">
+      <form className="login-form">
+        <h1>SWAPI Trivia</h1>
+        <section className="login-input">
           <label></label>
           <input></input>
         </section>
-        <section className="quoteInputAndLabel">
+        <section className="login-input">
           <label></label>
           <input></input>
         </section>
-        <section className="triviaLevelButtons">
+        <section className="login-radio-buttons">
           <input type="radio">Novice</input>
           <input type="radio">Intermediate</input>
           <input type="radio">Expert</input>
