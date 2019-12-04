@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile should render UserProfile 1`] = `
+<section
+  className="user-profile"
+>
+  <div
+    style={
+      Object {
+        "backgroundImage": "url(death-star.svg)",
+      }
+    }
+  />
+  <section>
+    <h3>
+      <span>
+         
+      </span>
+    </h3>
+    <p />
+    <button
+      onClick={[MockFunction]}
+    >
+      Log Out
+    </button>
+  </section>
+</section>
+`;

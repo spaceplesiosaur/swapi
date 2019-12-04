@@ -8,15 +8,27 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: LoginPage
+      currentPage: MoviesPage,
+      user: {name: 'The Rock', rank: 'expert', quote: "I hate sand"}
     }
+  }
+
+  // changePage = (chosenPage) => {
+  //   this.setState({currentPage: chosenPage})
+  // }
+
+  logOut = () => {
+    this.setState({currentPage: LoginPage, user: {}})
   }
 
   render() {
     const Page = this.state.currentPage
     return (
       <main className="app">
-        <Page />
+        <Page
+        user={this.state.user}
+        logOut={this.logOut}
+        />
       </main>
     )
   }

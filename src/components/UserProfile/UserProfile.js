@@ -6,12 +6,12 @@ const UserProfile = ({name, quote, rank, logOut}) => {
 
   return (
     <section className="user-profile">
-      <img src={userImage}></img>
+      <div style={{backgroundImage: `url(${userImage})`}}></div>
       <section>
-        <h3>{name}:<span> {rank}</span></h3>
+        <h3>{name}<span> {rank}</span></h3>
         <p>{quote}</p>
+        <button onClick={logOut}>Log Out</button>
       </section>
-      <button onClick={logOut}>Log Out</button>
     </section>
   )
 }

@@ -7,7 +7,7 @@ describe("MoviesPage", () => {
   it('should render MoviesPage', () => {
     const wrapper = shallow(
       <MoviesPage
-      user={"The Rock"}
+      user={{name: "The Rock"}}
       logOut={jest.fn()}
       />)
     expect(wrapper).toMatchSnapshot();

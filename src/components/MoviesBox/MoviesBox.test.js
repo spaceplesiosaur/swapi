@@ -10,6 +10,7 @@ describe("MoviesBox", () => {
       <MoviesBox
       />
     )
+    expect(wrapper).toMatchSnapshot();
   })
 
   it("should generate cards from state", () => {

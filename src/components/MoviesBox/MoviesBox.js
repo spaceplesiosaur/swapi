@@ -13,7 +13,8 @@ export default class MovieBox extends Component {
   componentDidMount = () => {
     fetch('https://swapi.co/api/films/')
     .then(response => response.json())
-    .then(data => this.setState({cards: data.results.sort((a, b) => {return a.episode_id - b.episode_id})}))
+    .then(data => data.results.sort((a, b) => {return a.episode_id - b.episode_id}))
+    .then(data => this.setState({cards: data}))
   }
   generateCards = () => {
     return this.state.cards.map(card => {
