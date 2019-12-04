@@ -8,6 +8,14 @@ exports[`MoviesPage should render MoviesPage 1`] = `
     className="userProfile"
   >
     <UserProfile
+      0="T"
+      1="h"
+      2="e"
+      3=" "
+      4="R"
+      5="o"
+      6="c"
+      7="k"
       logOut={[MockFunction]}
     />
   </section>

@@ -10,9 +10,7 @@ const MoviesPage = ({user, logOut}) => {
     <section className="moviePage">
       <section className="userProfile">
         <UserProfile
-        name={user.name}
-        rank={user.rank}
-        quote={user.quote}
+        {...user}
         logOut={logOut}
          />
       </section>
