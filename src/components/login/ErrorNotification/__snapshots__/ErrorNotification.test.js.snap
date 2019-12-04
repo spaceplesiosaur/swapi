@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot with all data passed in correctly 1`] = `
+<p
+  className="error-notification"
+>
+  Please, enter all data to continue!
+</p>
+`;
