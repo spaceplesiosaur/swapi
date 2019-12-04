@@ -1,1 +1,44 @@
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  float: right;
+  top: auto;
+  border: 2px solid black;
+  padding: 1.6% 5% 1.6% 5%;
+  margin: 1.5% 1.5% 1.5% 1.5%;
+    img {
+      width: 35%;
+      height: 35%;
+      margin-left: 0;
 
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+    }
+    h3 {
+      font-size: 1em;
+      font-weight: bold;
+
+      span {
+        font-size: 1em;
+        font-weight: lighter;
+      }
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: lighter;
+      font-style: italic;
+    }
+    button {
+      width: 6%;
+      height: 1%;
+      font-size: 1em;
+      background-color: papayawhip;
+      border: none;
+    }
+}

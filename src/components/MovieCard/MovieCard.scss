@@ -1,39 +1,39 @@
 .movie-card {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
-  margin: 0 1em 0 1em;
-  padding: 0 2em 1em 2em;
-  width: 15em;
+  margin: 0 0 0 3%;
+  padding: 0 2% 4% 2%;
+  min-width: 15%;
+  min-height: 75%;
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 2.5em;
   border-bottom: 1px black solid;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: 5%;
   color: #5A2C05;
+  min-height: 25%;
 }
 
 h4 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: normal;
-  padding: 0;
-  margin: .5em;
+  margin: 1%;
+  min-height: 20%;
   color: #5A2C05;
 }
 
 p {
-  font-size: 1.5em;
-  padding-bottom: 1.5em;
+  font-size: 1.2em;
+  padding-bottom: 20%;
 }
 
 button {
-  width: 232px;
-  height: 36px;
-  left: 351px;
-  top: 560px;
   background-color: #F1AA61;
   color: #5A2C05;
   border: 1px solid #964809;
   box-sizing: border-box;
+  font-size: 1.25em;
+  padding: 3% 15% 3% 15%;
 }

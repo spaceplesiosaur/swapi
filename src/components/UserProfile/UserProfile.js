@@ -1,17 +1,17 @@
 import React from 'react';
 import './UserProfile.scss'
+import userImage from '../../images/death-star.svg'
 
-const UserProfile = () => {
+const UserProfile = ({name, rank, quote, logOut}) => {
 
   return (
     <section className="user-profile">
-      <img></img>
+      <img src={userImage}></img>
       <section>
-        <h3></h3>
-        <p></p>
-        <p></p>
+        <h3>{name}:<span> {rank}</span></h3>
+        <p>{quote}</p>
       </section>
-      <button></button>
+      <button onClick={logOut}>Log Out</button>
     </section>
   )
 }
