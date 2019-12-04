@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginInput should match the snapshot with all data passed in correctly 1`] = `
+<section
+  className="login-input"
+>
+  <label
+    htmlFor="name"
+  >
+    your name
+  </label>
+  <input
+    id="name"
+    onChange={[Function]}
+    placeholder="enter your name"
+    value="Skywalker"
+  />
+</section>
+`;
