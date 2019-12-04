@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginRadioButton should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="radio-button-wrapper"
+>
+  <input
+    checked={false}
+    id="expert"
+    onChange={[Function]}
+    type="radio"
+    value="expert"
+  />
+  <label
+    htmlFor="expert"
+  >
+    Expert
+  </label>
+</div>
+`;

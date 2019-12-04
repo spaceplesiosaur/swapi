@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm should match the snapshot with all data passed in correctly 1`] = `
+<form
+  className="login-form"
+>
+  <h1>
+    SWAPI Trivia
+  </h1>
+  <LoginInput
+    key="name"
+    toggleChangeState={[Function]}
+    type="name"
+    value=""
+  />
+  <LoginInput
+    key="quote"
+    toggleChangeState={[Function]}
+    type="favorite quote"
+    value=""
+  />
+  <section
+    className="login-radio-buttons"
+  >
+    <LoginRadioButton
+      currentRank="novice"
+      key="novice"
+      toggleChangeState={[Function]}
+      type="novice"
+    />
+    <LoginRadioButton
+      currentRank="novice"
+      key="intermediate"
+      toggleChangeState={[Function]}
+      type="intermediate"
+    />
+    <LoginRadioButton
+      currentRank="novice"
+      key="expert"
+      toggleChangeState={[Function]}
+      type="expert"
+    />
+  </section>
+  <button
+    onClick={[Function]}
+  >
+    Submit
+  </button>
+</form>
+`;
+
+exports[`LoginForm should match the snapshot with error notification 1`] = `
+<form
+  className="login-form"
+>
+  <h1>
+    SWAPI Trivia
+  </h1>
+  <ErrorNotification />
+  <LoginInput
+    key="name"
+    toggleChangeState={[Function]}
+    type="name"
+    value=""
+  />
+  <LoginInput
+    key="quote"
+    toggleChangeState={[Function]}
+    type="favorite quote"
+    value=""
+  />
+  <section
+    className="login-radio-buttons"
+  >
+    <LoginRadioButton
+      currentRank="novice"
+      key="novice"
+      toggleChangeState={[Function]}
+      type="novice"
+    />
+    <LoginRadioButton
+      currentRank="novice"
+      key="intermediate"
+      toggleChangeState={[Function]}
+      type="intermediate"
+    />
+    <LoginRadioButton
+      currentRank="novice"
+      key="expert"
+      toggleChangeState={[Function]}
+      type="expert"
+    />
+  </section>
+  <button
+    onClick={[Function]}
+  >
+    Submit
+  </button>
+</form>
+`;

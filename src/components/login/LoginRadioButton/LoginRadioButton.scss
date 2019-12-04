@@ -1,0 +1,18 @@
+$font-dark: #5A2C05;
+
+.radio-button-wrapper {
+  input {
+    position: absolute;
+    visibility: hidden;
+  }
+  label {
+    font-size: 18px;
+    color: $font-dark;
+    opacity: 0.5;
+    padding: 0.4em 1em;
+  }
+  input:checked + label {
+    border: 2px solid $font-dark;
+    opacity: 1;
+  }
+}
