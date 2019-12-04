@@ -1,0 +1,8 @@
+.movie-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  padding: 0 20px;
+  margin: 0 20px;
+}

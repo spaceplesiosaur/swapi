@@ -1,15 +1,14 @@
 import React from 'react';
 import './MovieCard.scss';
 
-const MovieCard = () => {
+const MovieCard = ({episode, title, year}) => {
 
   return (
     <section className="movie-card">
-      <h3></h3>
-      <div></div>
-      <h4></h4>
-      <p></p>
-      <button></button>
+      <h3>Episode {episode}</h3>
+      <h4>{title}</h4>
+      <p>{year}</p>
+      <button>View characters</button>
     </section>
   )
 }

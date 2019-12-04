@@ -5,14 +5,34 @@ import './MoviesBox.scss';
 export default class MovieBox extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      cards: []
+    }
+  }
+
+  componentDidMount = () => {
+    fetch('https://swapi.co/api/films/')
+    .then(response => response.json())
+    .then(data => data.results.sort((a, b) => {return a.episode_id - b.episode_id}))
+    .then(data => this.setState({cards: data}))
+  }
+  generateCards = () => {
+    return this.state.cards.map(card => {
+      return (
+        <MovieCard
+        key={Date.now() + Math.random()}
+        episode={card.episode_id}
+        title={card.title}
+        year={card.release_date.slice(0, (card.release_date.length -6))}
+        />
+      )
+    })
   }
 
   render() {
     return (
       <section className="movie-box">
-        <MovieCard />
-        {/* The above is a placeholder; this will be a const variable representing a mapping over the cards array   */}
+        {this.generateCards()}
       </section>
     )
   }

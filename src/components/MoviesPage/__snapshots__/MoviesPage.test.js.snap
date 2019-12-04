@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesPage should render MoviesPage 1`] = `
+<section
+  className="moviePage"
+>
+  <header>
+    <h2>
+      Star Wars Movies
+    </h2>
+    <UserProfile
+      logOut={[MockFunction]}
+      name="The Rock"
+    />
+  </header>
+  <MovieBox />
+</section>
+`;

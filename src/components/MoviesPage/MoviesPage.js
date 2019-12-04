@@ -3,12 +3,18 @@ import UserProfile from '../UserProfile/UserProfile';
 import MoviesBox from '../MoviesBox/MoviesBox';
 import './MoviesPage.scss';
 
-const MoviesPage = () => {
+const MoviesPage = ({user, logOut}) => {
 
   return (
-    <section>
-      <UserProfile />
-      <h2>Star Wars Movies</h2>
+    <section className="moviePage">
+
+      <header>
+        <h2>Star Wars Movies</h2>
+        <UserProfile
+        {...user}
+        logOut={logOut}
+         />
+      </header>
       <MoviesBox />
     </section>
   )
