@@ -13,6 +13,7 @@ class FavoriteButton extends Component {
 
   handleChange = () => {
     this.setState({isActive: !this.state.isActive})
+    this.props.addFavoriteCard(this.props.card)
   }
 
   render() {

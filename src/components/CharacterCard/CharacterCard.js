@@ -2,7 +2,7 @@ import React from 'react';
 import './CharacterCard.scss';
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
 
-const CharacterCard = ({name, species, planet, population, films}) => {
+const CharacterCard = ({name, species, planet, population, films, addFavoriteCard}) => {
 
   const filmList = () => {
     films.map(film => {
@@ -27,7 +27,7 @@ const CharacterCard = ({name, species, planet, population, films}) => {
       </ul>
       </section>
       <footer>
-        <FavoriteButton /> 
+        <FavoriteButton card={name, species, planet, population, films} addFavoriteCard={addFavoriteCard} /> 
       </footer>
     </section>
   )

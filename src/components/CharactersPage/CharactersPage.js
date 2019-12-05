@@ -25,6 +25,7 @@ const CharactersPage = ({sharedData, user, logOut}) => {
       <CharacterBox
         characters={sharedData.characters}
       />
+
     </section>
   )
 }

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import './CharacterBox.scss';
+import FavoriteCharacters from '../FavoriteCharacters/FavoriteCharacters'
 
 export default class CharacterBox extends Component {
   constructor() {
     super()
     this.state = {
-      characters: []
+      characters: [],
+      favorite: []
     }
   }
 
@@ -60,14 +62,23 @@ export default class CharacterBox extends Component {
       planet={character.planet}
       population={character.population}
       films={character.films}
+      addFavoriteCard={this.addFavoriteCard}
       />
     )
     })
   }
 
+  addFavoriteCard = (card) => {
+    this.setState({...this.state, favorite: [...this.state.favorite, card]})
+  }
+
   render() {
     return (
       <section className="character-box">
+        {
+          //<FavoriteCharacters favorite={this.state.favorite} />
+          // NOTE: this is `/favorite` block with favorite cards
+        }
         {this.generateCharacters()}
       </section>
     )
