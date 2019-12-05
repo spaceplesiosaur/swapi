@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import MovieCard from '../MovieCard/MovieCard';
+import fakeMovies from '../../mockData/fakeMovies.js';
+import fakeCharacters from '../../mockData/fakeCharacters.js'
 import './MoviesBox.scss';
 
 export default class MovieBox extends Component {
@@ -18,7 +20,15 @@ export default class MovieBox extends Component {
       this.setState({cards: data})
       console.log(data)
     })
+    .catch(err => {
+      console.log(err)
+      this.setState({cards: fakeMovies})
+    })
   }
+
+  // componentDidMount = () => {
+  //   this.setState({cards: fakeMovies})
+  // }
 
   generateCards = () => {
     return this.state.cards.map(card => {

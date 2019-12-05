@@ -23,7 +23,7 @@ const CharacterCard = ({name, species, planet, population, films}) => {
       </div>
       <ul>
         <h4 className="character-movies-header"></h4>
-        {films}
+        {filmList}
       </ul>
       </section>
     </section>
