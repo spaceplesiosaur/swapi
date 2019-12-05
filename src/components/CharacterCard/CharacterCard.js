@@ -1,25 +1,34 @@
 import React from 'react';
 import './CharacterCard.scss';
+import FavoriteButton from '../FavoriteButton/FavoriteButton'
 
-const CharacterCard = () => {
+const CharacterCard = ({name, species, planet, population, films, addFavoriteCard}) => {
+
+  const filmList = () => {
+    films.map(film => {
+      return <li>{film}</li>
+    })
+  }
 
   return (
     <section className="character-card">
       <header>
-        <h3></h3>
-        <img></img>
-        <p></p>
+        <h3>{name}</h3>
+        <p>{species}</p>
       </header>
       <section className="character-card-planet">
       <div>
-        <p></p>
-        <p></p>
+        <p>{planet}:</p>
+        <p>{population}</p>
       </div>
       <ul>
-        <h4 className="character-movies-header"></h4>
-        {/* Movie list placeholder*/}
+        <h4 className="character-movies-header">Movies:</h4>
+        {filmList}
       </ul>
       </section>
+      <footer>
+        <FavoriteButton card={name, species, planet, population, films} addFavoriteCard={addFavoriteCard} /> 
+      </footer>
     </section>
   )
 }
