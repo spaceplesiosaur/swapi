@@ -1,12 +1,58 @@
-.charactersPage {
+.characters-page {
   min-width: 100vw; min-height: 100vh;
   position: relative;
+  &>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
   h2 {
     font-size: 3.2em;
   }
 }
 
-.scroll-box {
-  width: 90%;
-  height: 40%;
+.crawl-text {
+  width: 80vw; height: 25vh;
+  overflow: hidden;
+  background-image: url('../../images/space.jpg');
+  background-size: 100%;
+  margin: 0 auto;
+  section {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 400px;
+    div {
+      position: relative;
+      top: 99999px;
+      transform-origin: 50% 100%;
+      animation: crawl 60s infinite linear;
+      h4 {
+        font-size: 84px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 80px;
+      }
+    }
+  }
+}
+
+@keyframes crawl {
+	0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+	100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
 }

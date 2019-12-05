@@ -1,5 +1,6 @@
 import React from 'react';
 import './CharacterCard.scss';
+import FavoriteButton from '../FavoriteButton/FavoriteButton'
 
 const CharacterCard = ({name, species, planet, population, films}) => {
 
@@ -13,19 +14,21 @@ const CharacterCard = ({name, species, planet, population, films}) => {
     <section className="character-card">
       <header>
         <h3>{name}</h3>
-        <img></img>
         <p>{species}</p>
       </header>
       <section className="character-card-planet">
       <div>
-        <p>{planet}</p>
+        <p>{planet}:</p>
         <p>{population}</p>
       </div>
       <ul>
-        <h4 className="character-movies-header"></h4>
-        {films}
+        <h4 className="character-movies-header">Movies:</h4>
+        {filmList}
       </ul>
       </section>
+      <footer>
+        <FavoriteButton /> 
+      </footer>
     </section>
   )
 }

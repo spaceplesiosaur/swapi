@@ -6,15 +6,22 @@ import './CharactersPage.scss';
 const CharactersPage = ({sharedData, user, logOut}) => {
 
   return (
-    <section className="charactersPage">
-      <UserProfile
-        user={user}
-        logOut={logOut}
-      />
-      <h2>Episode {sharedData.episode}: {sharedData.title}</h2>
-      <section className="scroll-box">
-        <p>{sharedData.scroll}</p>
-      </section>
+    <section className="characters-page">
+      <header>
+        <h2>Episode {sharedData.episode}: {sharedData.title}</h2>
+        <UserProfile
+          user={user}
+          logOut={logOut}
+        />
+      </header>
+      <main className="crawl-text">
+        <section>
+          <div>
+            <h4>{sharedData.title}</h4>
+            <p>{sharedData.scroll}</p>
+          </div>
+        </section>
+      </main>
       <CharacterBox
         characters={sharedData.characters}
       />
