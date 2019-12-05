@@ -6,10 +6,17 @@ exports[`MovieCard should render MovieCard 1`] = `
 >
   <h3>
     Episode 
+    1
   </h3>
-  <h4 />
-  <p />
-  <button>
+  <h4>
+    Baz Lerman's Sarah Plain And Tall
+  </h4>
+  <p>
+    1999
+  </p>
+  <button
+    onClick={[Function]}
+  >
     View characters
   </button>
 </section>

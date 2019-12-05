@@ -2,9 +2,9 @@ import React from 'react';
 import CharactersPage from '../CharactersPage/CharactersPage'
 import './MovieCard.scss';
 
-const MovieCard = ({episode, title, year, changePage, scroll, user, logOut, setSharedData, sharedData}) => {
+const MovieCard = ({episode, title, year, changePage, scroll, characters, user, logOut, setSharedData, sharedData}) => {
   const createSharedData = () => {
-    const movieData = {episode, title, year, scroll}
+    const movieData = {episode, title, year, scroll, characters}
     {setSharedData(movieData)}
   }
   const createCharactersPage = () => {

@@ -1,23 +1,29 @@
 import React from 'react';
 import './CharacterCard.scss';
 
-const CharacterCard = () => {
+const CharacterCard = ({name, species, planet, population, films}) => {
+
+  const filmList = () => {
+    films.map(film => {
+      return <li>{film}</li>
+    })
+  }
 
   return (
     <section className="character-card">
       <header>
-        <h3></h3>
+        <h3>{name}</h3>
         <img></img>
-        <p></p>
+        <p>{species}</p>
       </header>
       <section className="character-card-planet">
       <div>
-        <p></p>
-        <p></p>
+        <p>{planet}</p>
+        <p>{population}</p>
       </div>
       <ul>
         <h4 className="character-movies-header"></h4>
-        {/* Movie list placeholder*/}
+        {films}
       </ul>
       </section>
     </section>
