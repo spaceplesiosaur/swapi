@@ -10,12 +10,13 @@ export default class MovieBox extends Component {
     }
   }
 
-  componentDidMount = () => {
-    fetch('https://swapi.co/api/films/')
-    .then(response => response.json())
-    .then(data => data.results.sort((a, b) => {return a.episode_id - b.episode_id}))
-    .then(data => this.setState({cards: data}))
-  }
+  // componentDidMount = () => {
+  //   fetch('https://swapi.co/api/films/')
+  //   .then(response => response.json())
+  //   .then(data => data.results.sort((a, b) => {return a.episode_id - b.episode_id}))
+  //   .then(data => this.setState({cards: data}))
+  // }
+
   generateCards = () => {
     return this.state.cards.map(card => {
       return (
@@ -24,6 +25,9 @@ export default class MovieBox extends Component {
         episode={card.episode_id}
         title={card.title}
         year={card.release_date.slice(0, (card.release_date.length -6))}
+        scroll={card.opening_crawl}
+        changePage={this.props.changePage}
+        setSharedData={this.props.setSharedData}
         />
       )
     })

@@ -3,14 +3,17 @@ import UserProfile from '../UserProfile/UserProfile';
 import CharacterBox from '../CharacterBox/CharacterBox';
 import './CharactersPage.scss';
 
-const CharactersPage = () => {
+const CharactersPage = ({sharedData, user, logOut}) => {
 
   return (
-    <section>
-      <UserProfile />
-      <h2></h2>
-      <section>
-        <p>{/* Dynamic text from API*/}</p>
+    <section className="charactersPage">
+      <UserProfile
+      user={user}
+      logOut={logOut}
+      />
+      <h2>Episode {sharedData.episode}: {sharedData.title}</h2>
+      <section className="scroll-box">
+        <p>{sharedData.scroll}</p>
       </section>
       <CharacterBox />
     </section>

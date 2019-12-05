@@ -3,7 +3,7 @@ import UserProfile from '../UserProfile/UserProfile';
 import MoviesBox from '../MoviesBox/MoviesBox';
 import './MoviesPage.scss';
 
-const MoviesPage = ({user, logOut}) => {
+const MoviesPage = ({user, sharedData, logOut, changePage, setSharedData}) => {
 
   return (
     <section className="moviePage">
@@ -15,7 +15,11 @@ const MoviesPage = ({user, logOut}) => {
         logOut={logOut}
          />
       </header>
-      <MoviesBox />
+      <MoviesBox
+      sharedData={sharedData}
+      changePage={changePage}
+      setSharedData={setSharedData}
+      />
     </section>
   )
 }
