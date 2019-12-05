@@ -17,6 +17,10 @@ export default class CharacterBox extends Component {
     const characterPromises = limitedCharacters.map(character => {
       return fetch(character)
       .then(response => response.json())
+      .catch(err => {
+        console.log(err)
+        this.setState({characters: [...this.state.characters, character]})
+      })
     })
 
     const characterFacts = Promise.all(characterPromises)
