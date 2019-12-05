@@ -26,15 +26,12 @@ export default class MovieBox extends Component {
     })
   }
 
-  // componentDidMount = () => {
-  //   this.setState({cards: fakeMovies})
-  // }
-
   generateCards = () => {
-    return this.state.cards.map(card => {
+    return this.state.cards.map((card, index) => {
       return (
         <MovieCard
-        key={Date.now() + Math.random()}
+        key={index}
+        id={index+1}
         episode={card.episode_id}
         title={card.title}
         year={card.release_date.slice(0, (card.release_date.length - 6))}
