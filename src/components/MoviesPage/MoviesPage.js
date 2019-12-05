@@ -7,7 +7,6 @@ const MoviesPage = ({user, sharedData, logOut, changePage, setSharedData}) => {
 
   return (
     <section className="moviePage">
-
       <header>
         <h2>Star Wars Movies</h2>
         <UserProfile

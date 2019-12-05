@@ -1,0 +1,20 @@
+.filter-button {
+  color: #5A2C05;
+  cursor: pointer;
+  padding: 0.4em 1em;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #5A2C05;
+  font-size: 24px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  .star-button {
+    cursor: pointer;
+    width: 24px;
+    margin-right: 10px;
+  }
+}
+
+.active-btn {
+  background: #5A2C05;
+  color: #F1AA61;
+}

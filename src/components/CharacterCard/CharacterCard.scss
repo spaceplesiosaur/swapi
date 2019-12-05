@@ -1,0 +1,71 @@
+.character-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-right: 17px;
+  padding: 20px;
+  position: relative;
+  width: 20%;
+  header {
+    border-bottom: 2px solid #5A2C05;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    h3 {
+      color: #5A2C05;
+      font-size: 24px;
+      min-height: 60px;
+    }
+    p {
+      color: rgba(90, 44, 5, 0.5);
+      text-transform: lowercase;
+      padding: 10px;
+    }
+  }
+  footer {
+    text-align: center;
+  }
+}
+
+.character-card-planet {
+  div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    p {
+      color: #5A2C05;
+      text-transform: uppercase;
+      &:first-child {
+        margin-left: 25px;
+        &::before {
+          content: '';
+          width: 20px; height: 20px;
+          background-image: url('../../images/mars.svg');
+          position: absolute;
+          left: 20px;
+        }
+      }
+    }
+  }
+  ul {
+    h4 {
+      color: #5A2C05;
+      border-bottom: 2px solid #5A2C05;
+      padding-bottom: 5px;
+      width: 40%;
+      margin-bottom: 20px;
+    }
+    li {
+      list-style-type: none;
+      margin-left: 40px;
+      margin-bottom: 15px;
+      &:before {
+        content: '';
+        width: 20px; height: 20px;
+        background-image: url('../../images/st.svg');
+        position: absolute;
+        left: 30px;
+      }
+    }
+  }
+}

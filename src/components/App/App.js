@@ -14,6 +14,10 @@ export default class App extends Component {
     }
   }
 
+  addUser = (user) => {
+     this.setState({user, currentPage: MoviesPage})
+  }
+
   setSharedData = (movieData) => {
     this.setState({sharedData: movieData})
   }
