@@ -2,10 +2,10 @@ import React from 'react';
 import './CharacterCard.scss';
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
 
-const CharacterCard = ({name, species, planet, population, films, addFavoriteCard}) => {
+const CharacterCard = (props) => {
 
   const filmList = () => {
-    films.map(film => {
+    return props.films.map(film => {
       return <li>{film}</li>
     })
   }
@@ -13,13 +13,13 @@ const CharacterCard = ({name, species, planet, population, films, addFavoriteCar
   return (
     <section className="character-card">
       <header>
-        <h3>{name}</h3>
-        <p>{species}</p>
+        <h3>{props.name}</h3>
+        <p>{props.species}</p>
       </header>
       <section className="character-card-planet">
       <div>
-        <p>{planet}:</p>
-        <p>{population}</p>
+        <p>{props.planet}:</p>
+        <p>{props.population}</p>
       </div>
       <ul>
         <h4 className="character-movies-header">Movies:</h4>
@@ -27,7 +27,7 @@ const CharacterCard = ({name, species, planet, population, films, addFavoriteCar
       </ul>
       </section>
       <footer>
-        <FavoriteButton card={name, species, planet, population, films} addFavoriteCard={addFavoriteCard} /> 
+        <FavoriteButton card={props.name, props.species, props.planet, props.population, props.films} addFavoriteCard={props.addFavoriteCard} />
       </footer>
     </section>
   )

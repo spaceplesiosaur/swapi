@@ -1,23 +1,22 @@
 import React from 'react';
-import UserProfile from '../UserProfile/UserProfile';
+import UserProfile from '../../UserProfile/UserProfile';
 import MoviesBox from '../MoviesBox/MoviesBox';
 import './MoviesPage.scss';
 
-const MoviesPage = ({user, sharedData, logOut, changePage, setSharedData}) => {
-
+const MoviesPage = (props) => {
   return (
     <section className="moviePage">
       <header>
         <h2>Star Wars Movies</h2>
         <UserProfile
-        {...user}
-        logOut={logOut}
+          {...props.user}
+          logOut={props.logOut}
          />
       </header>
       <MoviesBox
-      sharedData={sharedData}
-      changePage={changePage}
-      setSharedData={setSharedData}
+        {...props.sys}
+        movies={props.movies}
+        addMovies={props.addMovies}
       />
     </section>
   )
