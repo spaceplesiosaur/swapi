@@ -14,5 +14,4 @@ describe("UserProfile", () => {
     )
     expect(wrapper).toMatchSnapshot();
   })
-
 })

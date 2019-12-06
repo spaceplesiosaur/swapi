@@ -55,20 +55,16 @@ export default class CharacterBox extends Component {
 
 
   generateCharacters = () => {
-    return this.state.characters.map(character => {
+    return this.state.characters.map((character, ind) => {
       return (
-      <CharacterCard
-      key={Date.now() + Math.random()}
-      {...character}
-      addFavorite={this.props.addFavorite}
-      removeFavorite={this.props.removeFavorite}
-      />
+        <CharacterCard
+          key={ind}
+          {...character}
+          addFavorite={this.props.addFavorite}
+          removeFavorite={this.props.removeFavorite}
+        />
     )
     })
-  }
-
-  addFavoriteCard = (card) => {
-    this.setState({...this.state, favorite: [...this.state.favorite, card]})
   }
 
   render() {

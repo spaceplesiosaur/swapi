@@ -12,11 +12,8 @@ describe("MovieCard", ()=> {
         year={'1999'}
         scroll={"Words on a page"}
         changePage={jest.fn()}
-        setSharedData={jest.fn()}
-    />
+        setSharedData={jest.fn()}/>
   );
     expect(wrapper).toMatchSnapshot();
   })
-
-
 })

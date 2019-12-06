@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import './App.scss';
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+import './App.scss'
 import fakeMovies from '../../mockData/fakeMovies.js'
-// import fakeCharacters from '../../mockData/fakeCharacters.js'
 import { getMoviesData } from '../../apiCalls/apiCalls'
 import LoginPage from '../login/LoginPage/LoginPage'
 import MoviesPage from '../movies/MoviesPage/MoviesPage'
 import CharactersPage from '../CharactersPage/CharactersPage'
 import FavoritesPage from '../favorite/FavoritesPage/FavoritesPage'
-import { Route } from 'react-router-dom'
+
 
 export default class App extends Component {
   constructor() {

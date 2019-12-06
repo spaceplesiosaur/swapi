@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 import './LoginForm.scss'
 import LoginInput from '../LoginInput/LoginInput'
 import LoginRadioButton from '../LoginRadioButton/LoginRadioButton'
 import ErrorNotification from '../ErrorNotification/ErrorNotification'
-import { NavLink } from 'react-router-dom';
 
 export default class LoginForm extends Component {
   constructor(props) {

@@ -35,7 +35,6 @@ export default class CharactersPage extends Component {
           addFavorite={this.props.addFavorite}
           removeFavorite={this.props.removeFavorite}
         />
-
       </section>
     )
   }
