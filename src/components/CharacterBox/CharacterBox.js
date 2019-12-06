@@ -61,11 +61,7 @@ export default class CharacterBox extends Component {
       return (
       <CharacterCard
       key={Date.now() + Math.random()}
-      name={character.name}
-      species={character.species}
-      planet={character.planet}
-      population={character.population}
-      films={character.films}
+      {...character}
       addFavoriteCard={this.addFavoriteCard}
       />
     )

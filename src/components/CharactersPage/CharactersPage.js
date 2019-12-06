@@ -19,7 +19,7 @@ export default class CharactersPage extends Component {
         <header>
           <h2>Episode {this.props.movie.episode_id}: {this.props.movie.title}</h2>
           <UserProfile
-            user={this.props.user}
+            {...this.props.user}
             logOut={this.props.logOut}
           />
         </header>
@@ -27,7 +27,7 @@ export default class CharactersPage extends Component {
           <section>
             <div>
               <h4>{this.props.movie.title}</h4>
-              <p>{this.props.movie.scroll}</p>
+              <p>{this.props.movie.opening_crawl}</p>
             </div>
           </section>
         </main>
