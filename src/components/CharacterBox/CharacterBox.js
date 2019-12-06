@@ -10,7 +10,7 @@ export default class CharacterBox extends Component {
       characters: []
     }
   }
-  
+
   componentDidMount = () => {
     const limitedCharacters = this.props.characters.slice(0, 10)
 
