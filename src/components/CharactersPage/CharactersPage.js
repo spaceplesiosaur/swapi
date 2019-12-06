@@ -3,27 +3,26 @@ import UserProfile from '../UserProfile/UserProfile';
 import CharacterBox from '../CharacterBox/CharacterBox';
 import './CharactersPage.scss';
 
-const CharactersPage = ({sharedData, user, logOut}) => {
-
+const CharactersPage = (props) => {
   return (
     <section className="characters-page">
       <header>
-        <h2>Episode {sharedData.episode}: {sharedData.title}</h2>
+        <h2>Episode {props.movie.episode_id}: {props.movie.title}</h2>
         <UserProfile
-          user={user}
-          logOut={logOut}
+          user={props.user}
+          logOut={props.logOut}
         />
       </header>
       <main className="crawl-text">
         <section>
           <div>
-            <h4>{sharedData.title}</h4>
-            <p>{sharedData.scroll}</p>
+            <h4>{props.movie.title}</h4>
+            <p>{props.movie.scroll}</p>
           </div>
         </section>
       </main>
       <CharacterBox
-        characters={sharedData.characters}
+        characters={props.movie.characters}
       />
 
     </section>
