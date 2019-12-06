@@ -3,12 +3,12 @@ import './App.scss';
 import LoginPage from '../login/LoginPage/LoginPage'
 import MoviesPage from '../MoviesPage/MoviesPage'
 import CharactersPage from '../CharactersPage/CharactersPage'
+import { Route } from 'react-router-dom'
 
 export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: MoviesPage,
       user: {name: 'The Rock', rank: 'expert', quote: "I hate sand"},
       sharedData: {}
     }
@@ -33,13 +33,10 @@ export default class App extends Component {
     const Page = this.state.currentPage
     return (
       <main className="app">
-        <Page
-        user={this.state.user}
-        sharedData={this.state.sharedData}
-        logOut={this.logOut}
-        changePage={this.goToCharactersPage}
-        setSharedData={this.setSharedData}
-        />
+        <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
+        <Route exact path='/movies' render={() => <MoviesPage {...this.state} logOut={this.logOut} setSharedData={this.setSharedData}/>} />
+        <Route exact path='/movies/:id' render={() => <CharactersPage {...this.state} logOut={this.logOut} setSharedData={this.setSharedData}/>
+        }/>
       </main>
     )
   }
