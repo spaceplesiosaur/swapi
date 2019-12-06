@@ -11,7 +11,7 @@ export default class CharacterBox extends Component {
       favorite: []
     }
   }
-
+  
   componentDidMount = () => {
     const limitedCharacters = this.props.characters.slice(0, 10)
     const characterPromises = limitedCharacters.map(character => {
