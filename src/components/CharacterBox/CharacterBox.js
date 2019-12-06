@@ -39,13 +39,14 @@ export default class CharacterBox extends Component {
 
         const filmsPromises =
         promise.films.map(film => {
-          fetch(film)
+          return fetch(film)
           .then(res => res.json())
           .then(data => data.title)
         })
 
         const filmsFetch =
         Promise.all(filmsPromises)
+        .then(data => {return data})
 
         const characterInfo =
         Promise.all([speciesFetch, planetFetch, filmsFetch])

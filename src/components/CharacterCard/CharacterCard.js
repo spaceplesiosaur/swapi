@@ -23,7 +23,7 @@ const CharacterCard = (props) => {
       </div>
       <ul>
         <h4 className="character-movies-header">Movies:</h4>
-        {filmList}
+        {filmList()}
       </ul>
       </section>
       <footer>
