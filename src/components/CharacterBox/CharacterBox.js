@@ -7,18 +7,17 @@ export default class CharacterBox extends Component {
   constructor() {
     super()
     this.state = {
-      characters: [],
-      favorite: []
+      characters: []
     }
   }
   
   componentDidMount = () => {
     const limitedCharacters = this.props.characters.slice(0, 10)
+
     const characterPromises = limitedCharacters.map(character => {
       return fetch(character)
       .then(response => response.json())
       .catch(err => {
-        console.log(err)
         this.setState({characters: [...this.state.characters, character]})
       })
     })

@@ -1,45 +1,68 @@
 import React, { Component } from 'react';
 import './App.scss';
+import fakeMovies from '../../mockData/fakeMovies.js'
+// import fakeCharacters from '../../mockData/fakeCharacters.js'
+import { getMoviesData } from '../../apiCalls/apiCalls'
 import LoginPage from '../login/LoginPage/LoginPage'
-import MoviesPage from '../MoviesPage/MoviesPage'
+import MoviesPage from '../movies/MoviesPage/MoviesPage'
 import CharactersPage from '../CharactersPage/CharactersPage'
+import { Route } from 'react-router-dom'
 
 export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: MoviesPage,
-      user: {name: 'The Rock', rank: 'expert', quote: "I hate sand"},
-      sharedData: {}
+      user: {
+        name: 'The Rock',
+        quote: "I hate sand",
+        rank: 'expert'},
+      movies: [ ],
+      favorite: [ ],
+      sys: {
+        isLoaded: false,
+        error: ''
+      }
     }
   }
 
-  addUser = (user) => {
-     this.setState({user, currentPage: MoviesPage})
+  addMovies = () => {
+    getMoviesData()
+      .then(movies => {
+        this.setState({
+          ...this.state,
+          movies,
+          sys: {...this.state.sys, isLoaded: true}
+        })
+      })
+      .catch(err => {
+        this.setState({
+          ...this.state,
+          movies: fakeMovies,
+          sys: {...this.state.sys, error: err}
+        })
+      })
   }
 
-  setSharedData = (movieData) => {
-    this.setState({sharedData: movieData})
-  }
-  goToCharactersPage = () => {
-    this.setState({currentPage: CharactersPage})
+  addUser = (user) => {
+     this.setState({ user })
   }
 
   logOut = () => {
-    this.setState({currentPage: LoginPage, user: {}})
+    this.setState({ user: {} })
   }
 
   render() {
-    const Page = this.state.currentPage
     return (
       <main className="app">
-        <Page
-        user={this.state.user}
-        sharedData={this.state.sharedData}
-        logOut={this.logOut}
-        changePage={this.goToCharactersPage}
-        setSharedData={this.setSharedData}
-        />
+        <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
+
+        <Route exact path='/movies' render={() => <MoviesPage
+          sys={this.state.sys}
+          user={this.state.user}
+          logOut={this.logOut}
+          movies={this.state.movies}
+          addMovies={this.addMovies}/>} />
+          
       </main>
     )
   }

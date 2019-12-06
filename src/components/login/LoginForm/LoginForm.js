@@ -3,6 +3,7 @@ import './LoginForm.scss'
 import LoginInput from '../LoginInput/LoginInput'
 import LoginRadioButton from '../LoginRadioButton/LoginRadioButton'
 import ErrorNotification from '../ErrorNotification/ErrorNotification'
+import { NavLink } from 'react-router-dom';
 
 export default class LoginForm extends Component {
   constructor(props) {
@@ -81,7 +82,9 @@ export default class LoginForm extends Component {
         <section className="login-radio-buttons">
           {radios}
         </section>
-        <button onClick={this.submitUser}>Submit</button>
+        <button onClick={this.submitUser}>
+          <NavLink to='/movies' className="login">Submit</NavLink>
+        </button>
       </form>
     )
   }
