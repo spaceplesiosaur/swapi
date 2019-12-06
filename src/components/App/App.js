@@ -6,6 +6,7 @@ import { getMoviesData } from '../../apiCalls/apiCalls'
 import LoginPage from '../login/LoginPage/LoginPage'
 import MoviesPage from '../movies/MoviesPage/MoviesPage'
 import CharactersPage from '../CharactersPage/CharactersPage'
+import FavoritesPage from '../favorite/FavoritesPage/FavoritesPage'
 import { Route } from 'react-router-dom'
 
 export default class App extends Component {
@@ -17,7 +18,13 @@ export default class App extends Component {
         quote: "I hate sand",
         rank: 'expert'},
       movies: [ ],
-      favorite: [ ],
+      favorites: [ {
+        name: 'name',
+        species: 'species',
+        planet: 'planet',
+        population: 150000,
+        films: ['films1', 'films2']
+      } ],
       sys: {
         isLoaded: false,
         error: ''
@@ -51,6 +58,15 @@ export default class App extends Component {
     this.setState({ user: {} })
   }
 
+  addFavorite = (card) => {
+    this.setState({...this.state, favorites: [...this.state.favorites, card]})
+  }
+
+  removeFavorite = (name) => {
+    const unFavorite =  this.state.favorites.filter(character => character.name !== name )
+    this.setState({...this.state, favorites: unFavorite})
+  }
+
   render() {
     return (
       <main className="app">
@@ -73,9 +89,17 @@ export default class App extends Component {
               logOut={this.logOut}
               addMovies={this.addMovies}
               movies={this.state.movies}
+              addFavorite={this.addFavorite}
+              removeFavorite={this.removeFavorite}
               />
           )
         }} />
+
+        <Route exact path='/favorite' render={() => <FavoritesPage
+          user={this.state.user}
+          favorites={this.state.favorites}
+          removeFavorite={this.removeFavorite}
+          />} />
 
       </main>
     )

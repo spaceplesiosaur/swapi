@@ -3,6 +3,7 @@ import UserProfile from '../UserProfile/UserProfile';
 import CharacterBox from '../CharacterBox/CharacterBox';
 import { Route } from 'react-router-dom';
 import './CharactersPage.scss';
+import Header from '../Header/Header'
 
 export default class CharactersPage extends Component {
   constructor() {
@@ -16,13 +17,10 @@ export default class CharactersPage extends Component {
   render() {
     return !this.props.movie ? null: (
       <section className="characters-page">
-        <header>
-          <h2>Episode {this.props.movie.episode_id}: {this.props.movie.title}</h2>
-          <UserProfile
-            {...this.props.user}
-            logOut={this.props.logOut}
-          />
-        </header>
+        <Header
+          user={this.props.user}
+          logOut={this.props.logOut}
+          header={`Episode ${this.props.movie.episode_id}: {this.props.movie.title}`} />
         <main className="crawl-text">
           <section>
             <div>
@@ -34,6 +32,8 @@ export default class CharactersPage extends Component {
         <CharacterBox
           characters={this.props.movie.characters}
           addMovies={this.props.addMovies}
+          addFavorite={this.props.addFavorite}
+          removeFavorite={this.props.removeFavorite}
         />
 
       </section>

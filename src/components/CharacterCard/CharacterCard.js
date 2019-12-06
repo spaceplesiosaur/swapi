@@ -27,7 +27,10 @@ const CharacterCard = (props) => {
       </ul>
       </section>
       <footer>
-        <FavoriteButton card={props.name, props.species, props.planet, props.population, props.films} addFavoriteCard={props.addFavoriteCard} />
+        <FavoriteButton
+          card={props.name, props.species, props.planet, props.population, props.films}
+          addFavorite={props.addFavorite}
+          removeFavorite={props.removeFavorite} />
       </footer>
     </section>
   )

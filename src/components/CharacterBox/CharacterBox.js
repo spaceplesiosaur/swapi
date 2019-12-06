@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import './CharacterBox.scss';
-import FavoriteCharacters from '../FavoriteCharacters/FavoriteCharacters'
 
 export default class CharacterBox extends Component {
   constructor() {
@@ -13,7 +12,6 @@ export default class CharacterBox extends Component {
 
   componentDidMount = () => {
     const limitedCharacters = this.props.characters.slice(0, 10)
-
     const characterPromises = limitedCharacters.map(character => {
       return fetch(character)
       .then(response => response.json())
@@ -62,7 +60,8 @@ export default class CharacterBox extends Component {
       <CharacterCard
       key={Date.now() + Math.random()}
       {...character}
-      addFavoriteCard={this.addFavoriteCard}
+      addFavorite={this.props.addFavorite}
+      removeFavorite={this.props.removeFavorite}
       />
     )
     })
@@ -75,10 +74,6 @@ export default class CharacterBox extends Component {
   render() {
     return (
       <section className="character-box">
-        {
-          //<FavoriteCharacters favorite={this.state.favorite} />
-          // NOTE: this is `/favorite` block with favorite cards
-        }
         {this.generateCharacters()}
       </section>
     )
