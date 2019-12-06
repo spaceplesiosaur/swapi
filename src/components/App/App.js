@@ -64,20 +64,16 @@ export default class App extends Component {
           addMovies={this.addMovies}/>} />
 
         <Route path='/movies/:id' render={({ match }) => {
-          console.log("MATCH", match)
           const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))
-          console.log("MOOOVIE", this.state.movies)
           return (
-            <div>
             <CharactersPage
-            id={match.params.id}
-            movie={specificMovie}
-            user={this.state.user}
-            logOut={this.logOut}
-            addMovies={this.addMovies}
-            movies={this.state.movies}
-            />
-            </div>
+              id={match.params.id}
+              movie={specificMovie}
+              user={this.state.user}
+              logOut={this.logOut}
+              addMovies={this.addMovies}
+              movies={this.state.movies}
+              />
           )
         }} />
 
