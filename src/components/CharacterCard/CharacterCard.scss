@@ -5,13 +5,15 @@
   margin-right: 17px;
   padding: 20px;
   position: relative;
-  width: 20%;
+  width: 15%;
   header {
     border-bottom: 2px solid #5A2C05;
     text-align: center;
-    width: 80%;
     margin: auto;
     h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #5A2C05;
       font-size: 24px;
       min-height: 60px;
@@ -28,44 +30,55 @@
 }
 
 .character-card-planet {
-  div {
+  padding: 40px 0 20px;
+  p {
+    color: #5A2C05;
+    text-transform: uppercase;
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-    p {
-      color: #5A2C05;
-      text-transform: uppercase;
-      &:first-child {
-        margin-left: 25px;
-        &::before {
-          content: '';
-          width: 20px; height: 20px;
-          background-image: url('../../images/mars.svg');
-          position: absolute;
-          left: 20px;
-        }
+    align-items: center;
+    &:first-child {
+      font-weight: 700;
+      margin-left: 35px;
+      margin-bottom: 20px;
+      &::before {
+        content: '';
+        width: 28px; height: 28px;
+        background-image: url('../../images/mars.svg');
+        position: absolute;
+        left: 20px;
+      }
+    }
+    &:last-child {
+      margin-left: 35px;
+      &::before {
+        content: '';
+        width: 28px; height: 28px;
+        background-image: url('../../images/population.svg');
+        position: absolute;
+        left: 20px;
       }
     }
   }
-  ul {
-    h4 {
-      color: #5A2C05;
-      border-bottom: 2px solid #5A2C05;
-      padding-bottom: 5px;
-      width: 40%;
-      margin-bottom: 20px;
-    }
-    li {
-      list-style-type: none;
-      margin-left: 40px;
-      margin-bottom: 15px;
-      &:before {
-        content: '';
-        width: 20px; height: 20px;
-        background-image: url('../../images/st.svg');
-        position: absolute;
-        left: 30px;
-      }
+}
+
+.character-card-movies {
+  h4 {
+    color: #5A2C05;
+    width: 40%;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+  li {
+    font-size: 16px;
+    list-style-type: none;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    &:before {
+      content: '';
+      width: 20px; height: 20px;
+      background-image: url('../../images/st.svg');
+      position: absolute;
+      left: 20px;
     }
   }
 }

@@ -1,8 +1,9 @@
 .app {
   background-color: #F1AA61;
   background-image: url('../../images/bg-image.jpg');
-  background-size: cover;
+  background-size: 110%;
   background-repeat: no-repeat;
-  background-position: center;
-  min-width: 100vw; min-height: 100vh;
+  background-position: 0 0;
+  width: 100vw; height: 100vh;
+  overflow: scroll;
 }
