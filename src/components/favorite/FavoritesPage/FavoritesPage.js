@@ -11,7 +11,9 @@ const FavoritesPage = (props) => {
         headerText={"My Favorite Characters"}
         user={props.user}
       />
-      <FavoriteCharacters {...props} />
+      <FavoriteCharacters
+        favorites={props.favorites}
+        removeFavorite={props.removeFavorite} />
     </section>
   )
 }

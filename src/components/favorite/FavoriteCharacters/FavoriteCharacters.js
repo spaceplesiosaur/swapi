@@ -3,15 +3,13 @@ import CharacterCard from '../../CharacterCard/CharacterCard';
 import './FavoriteCharacters.scss';
 import FavoriteFilter from '../../FavoriteFilter/FavoriteFilter'
 
-const FavoriteCharacters = ({favorites}) => {
+const FavoriteCharacters = ({favorites, removeFavorite}) => {
   const putCards = favorites.map((character,ind) => (
     <CharacterCard
       key={ind}
-      name={character.name}
-      species={character.species}
-      planet={character.planet}
-      population={character.population}
-      films={character.films}
+      character={character}
+      isFavorite={true}
+      removeFavorite={removeFavorite}
     />
   ))
 

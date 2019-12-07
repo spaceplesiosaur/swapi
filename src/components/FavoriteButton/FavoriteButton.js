@@ -1,31 +1,28 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './FavoriteButton.scss'
 import emptyStar from '../../images/star.svg'
 import fullStar from '../../images/full-star.svg'
 
-class FavoriteButton extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isActive: false
-    }
+const FavoriteButton = (props) => {
+
+  const star = (props.isFavorite === true) ? fullStar : emptyStar
+
+  const toggleChange = () => {
+    (!props.isFavorite)
+      ? props.addFavorite(props.card)
+      : props.removeFavorite(props.card.name)
+
+    props.toggleCard()
   }
 
-  handleChange = () => {
-    this.setState({isActive: !this.state.isActive})
-  }
-
-  render() {
-    const star = (this.state.isActive === true) ? fullStar : emptyStar
-    return (
-      <img
-        src={star}
-        alt="star"
-        role="button"
-        className="star-button"
-        onClick={this.handleChange}/>
-    )
-  }
+  return (
+    <img
+      src={star}
+      alt="star"
+      role="button"
+      className="star-button"
+      onClick={toggleChange}/>
+  )
 }
 
 export default FavoriteButton

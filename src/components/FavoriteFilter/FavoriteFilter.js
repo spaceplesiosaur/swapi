@@ -1,34 +1,27 @@
 import React, { Component } from 'react'
 import './FavoriteFilter.scss'
-import emptyStar from '../../images/star.svg'
-import fullStar from '../../images/full-star.svg'
+import { Redirect } from 'react-router-dom'
 
 class FavoriteFilter extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isActive: false
+      toFavorite: false
     }
   }
 
-  handleChange = () => {
-    this.setState({isActive: !this.state.isActive})
+  redirect = () => {
+    this.setState({toFavorite: true})
   }
 
   render() {
-    const star = (this.state.isActive === true) ? fullStar : emptyStar
-    const btnClass = (this.state.isActive === true) ? 'active-btn' : 'inactive' 
     return (
-      <button
-        className={'filter-button ' + btnClass}
-        onClick={this.handleChange}>
-        <img
-          src={star}
-          alt="star"
-          role="button"
-          className="star-button"/>
-        Favorite
-      </button>
+      (this.state.toFavorite)
+        ? <Redirect to='/favorites' />
+        : <button
+            className='filter-button '
+            onClick={this.redirect}>see favorite characters ({this.props.number})
+          </button>
     )
   }
 }
