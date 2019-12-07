@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import './App.scss'
 import fakeMovies from '../../mockData/fakeMovies.js'
 import { getMoviesData } from '../../apiCalls/apiCalls'
@@ -7,6 +7,7 @@ import LoginPage from '../login/LoginPage/LoginPage'
 import MoviesPage from '../movies/MoviesPage/MoviesPage'
 import CharactersPage from '../CharactersPage/CharactersPage'
 import FavoritesPage from '../favorite/FavoritesPage/FavoritesPage'
+import Page404 from '../Page404/Page404'
 
 
 export default class App extends Component {
@@ -18,13 +19,7 @@ export default class App extends Component {
         quote: "I hate sand",
         rank: 'expert'},
       movies: [ ],
-      favorites: [ {
-        name: 'name',
-        species: 'species',
-        planet: 'planet',
-        population: 150000,
-        films: ['films1', 'films2']
-      } ],
+      favorites: [],
       sys: {
         isLoaded: false,
         error: ''
@@ -70,37 +65,41 @@ export default class App extends Component {
   render() {
     return (
       <main className="app">
-        <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
+        <Switch>
+          <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
 
-        <Route exact path='/movies' render={() => <MoviesPage
-          sys={this.state.sys}
-          user={this.state.user}
-          logOut={this.logOut}
-          movies={this.state.movies}
-          addMovies={this.addMovies}/>} />
+          <Route exact path='/movies' render={() => <MoviesPage
+            sys={this.state.sys}
+            user={this.state.user}
+            logOut={this.logOut}
+            movies={this.state.movies}
+            addMovies={this.addMovies}/>} />
 
-        <Route path='/movies/:id' render={({ match }) => {
-          const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))
-          return (
-            <CharactersPage
-              id={match.params.id}
-              movie={specificMovie}
-              user={this.state.user}
-              logOut={this.logOut}
-              addMovies={this.addMovies}
-              movies={this.state.movies}
-              addFavorite={this.addFavorite}
-              removeFavorite={this.removeFavorite}
-              />
-          )
-        }} />
+          <Route path='/movies/:id' render={({ match }) => {
+            const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))
+            return (
+              <CharactersPage
+                id={match.params.id}
+                movie={specificMovie}
+                user={this.state.user}
+                logOut={this.logOut}
+                addMovies={this.addMovies}
+                movies={this.state.movies}
+                favorites={this.state.favorites}
+                addFavorite={this.addFavorite}
+                removeFavorite={this.removeFavorite}
+                />
+            )
+          }} />
 
-        <Route exact path='/favorite' render={() => <FavoritesPage
-          user={this.state.user}
-          favorites={this.state.favorites}
-          removeFavorite={this.removeFavorite}
-          />} />
+          <Route exact path='/favorites' render={() => <FavoritesPage
+            user={this.state.user}
+            favorites={this.state.favorites}
+            removeFavorite={this.removeFavorite}
+            />} />
 
+          <Route path="*" component={Page404} />
+        </Switch>
       </main>
     )
   }
