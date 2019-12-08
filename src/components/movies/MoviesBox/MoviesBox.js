@@ -5,9 +5,7 @@ import './MoviesBox.scss'
 export default class MovieBox extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-
-    }
+    this.state = {}
   }
 
   componentDidMount = () => {

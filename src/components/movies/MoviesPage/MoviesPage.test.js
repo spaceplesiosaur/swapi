@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 import movieResults from '../../../mockData/fakeMovies.js'
-import MoviesPage from './MoviesPage';
+import MoviesPage from './MoviesPage'
 
 describe("MoviesPage", () => {
 
@@ -9,7 +9,7 @@ describe("MoviesPage", () => {
     const wrapper = shallow(
       <MoviesPage
         sys={{
-          isLoaded: false,
+          isLoaded: true,
           error: ''
         }}
         user={{
@@ -20,6 +20,7 @@ describe("MoviesPage", () => {
         movies={movieResults}
         addMovies={jest.fn()}
       />)
-    expect(wrapper).toMatchSnapshot();
+
+    expect(wrapper).toMatchSnapshot()
   })
 })
