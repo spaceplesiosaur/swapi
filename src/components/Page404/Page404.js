@@ -1,7 +1,7 @@
 import React from 'react'
 import './Page404.scss'
 import obiWan from '../../images/obiWan.svg'
-import hand from '../../images/hand (1).svg'
+import hand from '../../images/hand.svg'
 
 const Page404 = ( ) => {
   return (
