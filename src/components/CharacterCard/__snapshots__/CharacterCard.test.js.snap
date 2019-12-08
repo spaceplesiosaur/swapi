@@ -20,7 +20,7 @@ exports[`CharacterCard should render CharacterCard with all data passed in corre
         "species": "human",
       }
     }
-    isFavorite={false}
+    isFavorite={true}
     removeFavorite={[MockFunction]}
     toggleCard={[Function]}
   />
@@ -48,13 +48,19 @@ exports[`CharacterCard should render CharacterCard with all data passed in corre
     <h4>
       Movies:
     </h4>
-    <li>
+    <li
+      key="movie1"
+    >
       bambi
     </li>
-    <li>
+    <li
+      key="movie2"
+    >
       little women
     </li>
-    <li>
+    <li
+      key="movie3"
+    >
       sound of music
     </li>
   </ul>

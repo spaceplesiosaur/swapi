@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import UserProfile from '../UserProfile/UserProfile';
-import CharacterBox from '../CharacterBox/CharacterBox';
-import { Route } from 'react-router-dom';
-import './CharactersPage.scss';
+import React, { Component } from 'react'
+import CharacterBox from '../CharacterBox/CharacterBox'
+import './CharactersPage.scss'
 import Header from '../Header/Header'
 import FavoriteFilter from '../FavoriteFilter/FavoriteFilter'
 
 export default class CharactersPage extends Component {
   constructor(props) {
     super(props)
+    this.state = {}
   }
 
   componentDidMount = () => {

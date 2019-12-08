@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharactersPage should render CharactersPage 1`] = `
+exports[`CharactersPage should match snapshot if no movie data was passed 1`] = `""`;
+
+exports[`CharactersPage should match snapshot with all data passed in correctly 1`] = `
 <section
   className="characters-page"
 >
