@@ -4,10 +4,11 @@ import CharacterBox from '../CharacterBox/CharacterBox';
 import { Route } from 'react-router-dom';
 import './CharactersPage.scss';
 import Header from '../Header/Header'
+import FavoriteFilter from '../FavoriteFilter/FavoriteFilter'
 
 export default class CharactersPage extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
   }
 
   componentDidMount = () => {
@@ -20,7 +21,7 @@ export default class CharactersPage extends Component {
         <Header
           user={this.props.user}
           logOut={this.props.logOut}
-          header={`Episode ${this.props.movie.episode_id}: {this.props.movie.title}`} />
+          headerText={`Episode ${this.props.movie.episode_id}: ${this.props.movie.title}`} />
         <main className="crawl-text">
           <section>
             <div>
@@ -29,7 +30,12 @@ export default class CharactersPage extends Component {
             </div>
           </section>
         </main>
+        <div>
+          <h3>All Movie Characters</h3>
+          <FavoriteFilter number={this.props.favorites.length}/>
+        </div>
         <CharacterBox
+          favorites={this.props.favorites}
           characters={this.props.movie.characters}
           addMovies={this.props.addMovies}
           addFavorite={this.props.addFavorite}

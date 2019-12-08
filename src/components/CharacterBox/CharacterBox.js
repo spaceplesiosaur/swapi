@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import CharacterCard from '../CharacterCard/CharacterCard';
-import './CharacterBox.scss';
+import React, { Component } from 'react'
+import CharacterCard from '../CharacterCard/CharacterCard'
+import './CharacterBox.scss'
 
 export default class CharacterBox extends Component {
   constructor() {
@@ -56,10 +56,12 @@ export default class CharacterBox extends Component {
 
   generateCharacters = () => {
     return this.state.characters.map((character, ind) => {
+      const isFavorite = !!this.props.favorites.find(fav => fav.name === character.name)
       return (
         <CharacterCard
-          key={ind}
-          {...character}
+          key={'card-' + ind+1}
+          isFavorite={isFavorite}
+          character={character}
           addFavorite={this.props.addFavorite}
           removeFavorite={this.props.removeFavorite}
         />

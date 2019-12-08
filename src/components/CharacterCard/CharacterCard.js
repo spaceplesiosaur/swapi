@@ -1,39 +1,50 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './CharacterCard.scss';
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
 
-const CharacterCard = (props) => {
-
-  const filmList = () => {
-    return props.films.map(film => {
-      return <li>{film}</li>
-    })
+class CharacterCard extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isFavorite: false
+    }
   }
 
-  return (
-    <section className="character-card">
-      <header>
-        <h3>{props.name}</h3>
-        <p>{props.species}</p>
-      </header>
-      <section className="character-card-planet">
-      <div>
-        <p>{props.planet}:</p>
-        <p>{props.population}</p>
-      </div>
-      <ul>
-        <h4 className="character-movies-header">Movies:</h4>
-        {filmList()}
-      </ul>
-      </section>
-      <footer>
+  componentWillMount() {
+    this.setState({isFavorite: this.props.isFavorite})
+  }
+
+  toggleCard = () => {
+    this.setState({isFavorite: !this.state.isFavorite})
+  }
+
+  render() {
+    const { name, species, planet, population, films} = this.props.character
+    const filmList = films.map(film => <li>{film}</li>)
+
+    return (
+      <section className="character-card">
         <FavoriteButton
-          card={props.name, props.species, props.planet, props.population, props.films}
-          addFavorite={props.addFavorite}
-          removeFavorite={props.removeFavorite} />
-      </footer>
-    </section>
-  )
+          card={this.props.character}
+          isFavorite={this.state.isFavorite}
+          toggleCard={this.toggleCard}
+          addFavorite={this.props.addFavorite}
+          removeFavorite={this.props.removeFavorite} />
+        <header>
+          <h3>{name}</h3>
+          <p>{species}</p>
+        </header>
+        <div className="character-card-planet">
+          <p>{planet}</p>
+          <p>{population}</p>
+        </div>
+        <ul className="character-card-movies">
+          <h4>Movies:</h4>
+          {filmList}
+        </ul>
+      </section>
+    )
+  }
 }
 
 export default CharacterCard;

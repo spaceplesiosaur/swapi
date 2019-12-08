@@ -4,7 +4,7 @@ import './Header.scss'
 
 const Header = ({headerText, user, logOut}) => {
   return (
-    <header>
+    <header className="header">
       <h2>{headerText}</h2>
       <UserProfile
         {...user}
