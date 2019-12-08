@@ -1,6 +1,6 @@
 import React from 'react'
-import characterResults from '../../mockData/fakeCharacters.js'
-import movieResults from '../../mockData/fakeMovies.js'
+import characterResults from '../../../mockData/fakeCharacters.js'
+import movieResults from '../../../mockData/fakeMovies.js'
 import { shallow } from 'enzyme'
 import FavoriteCharacters from './FavoriteCharacters'
 
@@ -10,10 +10,7 @@ describe('FavoriteCharacters', () => {
   beforeEach(() => {
     wrapper = shallow(
       <FavoriteCharacters
-        key={'card1'}
-        isFavorite={false}
-        character={characterResults[0]}
-        addFavorite={jest.fn()}
+        favorites={[characterResults[1], characterResults[2]]}
         removeFavorite={jest.fn()}
       />);
   })

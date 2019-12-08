@@ -15,7 +15,9 @@ describe("MoviesBox", () => {
       opening_crawl: "paaaam-pam paaaaam-pam pa-pa-paaaam"
     }]
     const wrapper = shallow(
-      <MoviesBox moveies={mockProps}
+      <MoviesBox
+      movies={mockProps}
+      addMovies={jest.fn()}
       />
     )
     expect(wrapper).toMatchSnapshot();

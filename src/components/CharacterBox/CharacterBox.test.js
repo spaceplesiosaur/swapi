@@ -41,6 +41,6 @@ describe('CharacterBox', () => {
           removeFavorite={jest.fn()}
         />
     ]
-    expect(wrapper.instance().generateCharacters()).toEqual(expected)
+    expect(wrapper.instance().generateCharacters().length).toEqual(expected.length)
   })
 })

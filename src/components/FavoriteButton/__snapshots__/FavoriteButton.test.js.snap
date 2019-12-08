@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteButton should render FavoriteButton with all data passed in correctly 1`] = `
+<img
+  alt="star"
+  className="star-button"
+  onClick={[Function]}
+  role="button"
+  src="full-star.svg"
+/>
+`;

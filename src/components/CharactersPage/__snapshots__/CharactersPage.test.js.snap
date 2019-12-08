@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharactersPage should render CharactersPage 1`] = `
+<section
+  className="characters-page"
+>
+  <Header
+    headerText="Episode 1: the fast and the furious"
+    logOut={[MockFunction]}
+    user={
+      Object {
+        "name": "Taylor Swift",
+        "quote": "I find your lack of faith disturbing",
+        "rank": "intermediate",
+      }
+    }
+  />
+  <main
+    className="crawl-text"
+  >
+    <section>
+      <div>
+        <h4>
+          the fast and the furious
+        </h4>
+        <p>
+          paaaam-pam paaaaam-pam pa-pa-paaaam
+        </p>
+      </div>
+    </section>
+  </main>
+  <div>
+    <h3>
+      All Movie Characters
+    </h3>
+    <FavoriteFilter
+      number={0}
+    />
+  </div>
+  <CharacterBox
+    addFavorite={[MockFunction]}
+    addMovies={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    characters={
+      Array [
+        Object {
+          "films": Array [
+            "bambi",
+            "little women",
+            "sound of music",
+          ],
+          "isFavorite": false,
+          "name": "Luke",
+          "planet": "Tatioone",
+          "population": 20000,
+          "species": "human",
+        },
+        Object {
+          "films": Array [
+            "die hard",
+          ],
+          "isFavorite": true,
+          "name": "Leia",
+          "planet": "Alderaan",
+          "population": 230000,
+          "species": "human",
+        },
+        Object {
+          "films": Array [
+            "lawrence of arabia",
+          ],
+          "isFavorite": false,
+          "name": "Obi-wan",
+          "planet": "Whereever he is from",
+          "population": 40000,
+          "species": "human",
+        },
+        Object {
+          "films": Array [
+            "punch drunk love",
+          ],
+          "isFavorite": true,
+          "name": "Darth Vadar",
+          "planet": "Tatioone",
+          "population": 50000,
+          "species": "robot",
+        },
+        Object {
+          "films": Array [
+            "cinderella",
+          ],
+          "isFavorite": false,
+          "name": "Han",
+          "planet": "Millenium Falcon",
+          "population": 60000,
+          "species": "human",
+        },
+      ]
+    }
+    favorites={Array []}
+    removeFavorite={[MockFunction]}
+  />
+</section>
+`;

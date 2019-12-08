@@ -9,15 +9,19 @@ exports[`MovieCard should render MovieCard 1`] = `
     1
   </h3>
   <h4>
-    Baz Lerman's Sarah Plain And Tall
+    2 fast 2 furious
   </h4>
   <p>
-    1999
+    2000
   </p>
-  <button
-    onClick={[Function]}
-  >
-    View characters
+  <button>
+    <NavLink
+      className="view-chr"
+      key="1"
+      to="/movies/1"
+    >
+      View characters
+    </NavLink>
   </button>
 </section>
 `;

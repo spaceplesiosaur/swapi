@@ -44,7 +44,12 @@ exports[`LoginForm should match the snapshot with all data passed in correctly 1
   <button
     onClick={[Function]}
   >
-    Submit
+    <NavLink
+      className="login"
+      to="/movies"
+    >
+      Submit
+    </NavLink>
   </button>
 </form>
 `;
@@ -94,7 +99,12 @@ exports[`LoginForm should match the snapshot with error notification 1`] = `
   <button
     onClick={[Function]}
   >
-    Submit
+    <NavLink
+      className="login"
+      to="/movies"
+    >
+      Submit
+    </NavLink>
   </button>
 </form>
 `;

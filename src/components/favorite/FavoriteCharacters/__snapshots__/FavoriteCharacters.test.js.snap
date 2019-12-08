@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteCharacters should render FavoriteCharacters with all data passed in correctly 1`] = `
+<section
+  className="favorite-box"
+>
+  <CharacterCard
+    character={
+      Object {
+        "films": Array [
+          "die hard",
+        ],
+        "isFavorite": true,
+        "name": "Leia",
+        "planet": "Alderaan",
+        "population": 230000,
+        "species": "human",
+      }
+    }
+    isFavorite={true}
+    key="0"
+    removeFavorite={[MockFunction]}
+  />
+  <CharacterCard
+    character={
+      Object {
+        "films": Array [
+          "lawrence of arabia",
+        ],
+        "isFavorite": false,
+        "name": "Obi-wan",
+        "planet": "Whereever he is from",
+        "population": 40000,
+        "species": "human",
+      }
+    }
+    isFavorite={true}
+    key="1"
+    removeFavorite={[MockFunction]}
+  />
+</section>
+`;
