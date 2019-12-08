@@ -1,6 +1,4 @@
 import React from 'react'
-import characterResults from '../../mockData/fakeCharacters.js'
-import movieResults from '../../mockData/fakeMovies.js'
 import { shallow } from 'enzyme'
 import Header from './Header'
 
@@ -15,8 +13,8 @@ describe('Header', () => {
           rank: 'intermediate'}}
         logOut={jest.fn()}
         headerText={'Episode 1: Revenge of the Sloths'}
-      />);
-      
+      />)
+
     expect(wrapper).toMatchSnapshot()
   })
 })

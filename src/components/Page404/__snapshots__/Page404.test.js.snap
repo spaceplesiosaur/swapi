@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page404 should render Page404 with all data passed in correctly 1`] = `
+<section
+  className="no-page"
+>
+  <img
+    alt="Obi Wan Kenobi"
+    src="obiWan.svg"
+  />
+  <div>
+    <img
+      alt="hand"
+      src="hand.svg"
+    />
+  </div>
+  <h1>
+    404
+  </h1>
+  <h2>
+    There aren't the droids you're looking for...
+  </h2>
+</section>
+`;

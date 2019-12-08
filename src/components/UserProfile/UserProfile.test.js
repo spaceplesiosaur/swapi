@@ -1,17 +1,29 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import UserProfile from './UserProfile';
+import React from 'react'
+import { shallow } from 'enzyme'
+import UserProfile from './UserProfile'
 
 
 describe("UserProfile", () => {
+  let wrapper
+  const logOut = jest.fn()
 
-  it("should render UserProfile", () => {
-    const wrapper = shallow(
+  beforeEach(() => {
+    wrapper = shallow(
       <UserProfile
-      user={{name: "The Rock"}}
-      logOut={jest.fn()}
+        name={"The Rock"}
+        quote={'I hate sand'}
+        rank={'expert'}
+        logOut={logOut}
       />
     )
-    expect(wrapper).toMatchSnapshot();
+  })
+
+  it("should render UserProfile", () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it("should call logOut prop after button was clicked", () => {
+    wrapper.find('button').simulate('click')
+    expect(logOut).toHaveBeenCalled()
   })
 })
