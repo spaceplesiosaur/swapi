@@ -27,16 +27,6 @@ exports[`FavoritesPage should render FavoritesPage with all data passed in corre
           "population": 230000,
           "species": "human",
         },
-        Object {
-          "films": Array [
-            "lawrence of arabia",
-          ],
-          "isFavorite": false,
-          "name": "Obi-wan",
-          "planet": "Whereever he is from",
-          "population": 40000,
-          "species": "human",
-        },
       ]
     }
     removeFavorite={[MockFunction]}

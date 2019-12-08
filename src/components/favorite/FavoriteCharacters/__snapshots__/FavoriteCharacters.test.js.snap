@@ -21,22 +21,5 @@ exports[`FavoriteCharacters should render FavoriteCharacters with all data passe
     key="0"
     removeFavorite={[MockFunction]}
   />
-  <CharacterCard
-    character={
-      Object {
-        "films": Array [
-          "lawrence of arabia",
-        ],
-        "isFavorite": false,
-        "name": "Obi-wan",
-        "planet": "Whereever he is from",
-        "population": 40000,
-        "species": "human",
-      }
-    }
-    isFavorite={true}
-    key="1"
-    removeFavorite={[MockFunction]}
-  />
 </section>
 `;
