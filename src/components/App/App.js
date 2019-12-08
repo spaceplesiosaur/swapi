@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.scss'
-import movieResults from '../../mockData/fakeMovies.js'
+import fakeMovies from '../../mockData/fakeMovies.js'
 import { getMoviesData } from '../../apiCalls/apiCalls'
 import LoginPage from '../login/LoginPage/LoginPage'
 import MoviesPage from '../movies/MoviesPage/MoviesPage'
@@ -54,12 +54,12 @@ export default class App extends Component {
   }
 
   addFavorite = (card) => {
-    this.setState({...this.state, favorites: [...this.state.favorites, card]})
+    this.setState({ favorites: [...this.state.favorites, card]})
   }
 
   removeFavorite = (name) => {
     const unFavorite =  this.state.favorites.filter(character => character.name !== name )
-    this.setState({...this.state, favorites: unFavorite})
+    this.setState({favorites: unFavorite})
   }
 
   render() {
