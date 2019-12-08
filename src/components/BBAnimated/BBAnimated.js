@@ -1,3 +1,5 @@
+// Created by Brad Colthurst, https://codepen.io/bullerb/pen/gMpxNZ
+
 import React, { Component } from 'react'
 import './BBAnimated.scss'
 
