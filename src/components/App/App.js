@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.scss'
-import fakeMovies from '../../mockData/fakeMovies.js'
+import movieResults from '../../mockData/fakeMovies.js'
 import { getMoviesData } from '../../apiCalls/apiCalls'
 import LoginPage from '../login/LoginPage/LoginPage'
 import MoviesPage from '../movies/MoviesPage/MoviesPage'
