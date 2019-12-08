@@ -10,7 +10,7 @@ class CharacterCard extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setState({isFavorite: this.props.isFavorite})
   }
 
@@ -20,7 +20,7 @@ class CharacterCard extends Component {
 
   render() {
     const { name, species, planet, population, films} = this.props.character
-    const filmList = films.map(film => <li>{film}</li>)
+    const filmList = films.map((film, ind) => <li key={'movie' + (ind+1)} >{film}</li>)
 
     return (
       <section className="character-card">

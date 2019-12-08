@@ -54,12 +54,12 @@ export default class App extends Component {
   }
 
   addFavorite = (card) => {
-    this.setState({...this.state, favorites: [...this.state.favorites, card]})
+    this.setState({ favorites: [...this.state.favorites, card]})
   }
 
   removeFavorite = (name) => {
     const unFavorite =  this.state.favorites.filter(character => character.name !== name )
-    this.setState({...this.state, favorites: unFavorite})
+    this.setState({favorites: unFavorite})
   }
 
   render() {

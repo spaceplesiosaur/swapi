@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesPage should render FavoritesPage with all data passed in correctly 1`] = `
+<section
+  className="favorite-page"
+>
+  <Header
+    headerText="My Favorite Characters"
+    user={
+      Object {
+        "name": "Taylor Swift",
+        "quote": "I find your lack of faith disturbing",
+        "rank": "intermediate",
+      }
+    }
+  />
+  <FavoriteCharacters
+    favorites={
+      Array [
+        Object {
+          "films": Array [
+            "die hard",
+          ],
+          "isFavorite": true,
+          "name": "Leia",
+          "planet": "Alderaan",
+          "population": 230000,
+          "species": "human",
+        },
+      ]
+    }
+    removeFavorite={[MockFunction]}
+  />
+</section>
+`;

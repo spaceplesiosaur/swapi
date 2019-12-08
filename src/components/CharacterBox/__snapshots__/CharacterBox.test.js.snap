@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterBox should render CharacterBox with all data passed in correctly 1`] = `
+<section
+  className="character-box"
+/>
+`;

@@ -1,8 +1,7 @@
-import React from 'react';
-import UserProfile from '../../UserProfile/UserProfile';
+import React from 'react'
 import Header from '../../Header/Header'
-import MoviesBox from '../MoviesBox/MoviesBox';
-import './MoviesPage.scss';
+import MoviesBox from '../MoviesBox/MoviesBox'
+import './MoviesPage.scss'
 import BBAnimated from '../../BBAnimated/BBAnimated'
 
 const MoviesPage = (props) => {
@@ -23,4 +22,4 @@ const MoviesPage = (props) => {
   )
 }
 
-export default MoviesPage;
+export default MoviesPage

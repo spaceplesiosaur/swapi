@@ -1,18 +1,517 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MoviesPage should render MoviesPage 1`] = `
+exports[`MoviesPage should render MoviesPage with all data passed in correctly 1`] = `
 <section
   className="moviePage"
 >
-  <header>
-    <h2>
-      Star Wars Movies
-    </h2>
-    <UserProfile
-      logOut={[MockFunction]}
-      name="The Rock"
-    />
-  </header>
-  <MovieBox />
+  <Header
+    headerText="Star Wars Movies"
+    logOut={[MockFunction]}
+    user={
+      Object {
+        "name": "Padme",
+        "quote": "Rock is smooth",
+        "rank": "expert",
+      }
+    }
+  />
+  <MovieBox
+    addMovies={[MockFunction]}
+    error=""
+    isLoaded={true}
+    movies={
+      Array [
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 1,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "1999-07-05",
+          "scroll": "words words words",
+          "title": "the fast and the furious",
+        },
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 2,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "2000-07-05",
+          "scroll": "words words words",
+          "title": "2 fast 2 furious",
+        },
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 3,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "2001-07-05",
+          "scroll": "words words words",
+          "title": "Tokyo Drift",
+        },
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 4,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "2002-07-05",
+          "scroll": "words words words",
+          "title": "fast & furious",
+        },
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 5,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "2003-07-05",
+          "scroll": "words words words",
+          "title": "fast 5",
+        },
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 6,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "2004-07-05",
+          "scroll": "words words words",
+          "title": "furious 6",
+        },
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 7,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "2005-07-05",
+          "scroll": "words words words",
+          "title": "furious 7",
+        },
+        Object {
+          "characters": Array [
+            Object {
+              "films": Array [
+                "bambi",
+                "little women",
+                "sound of music",
+              ],
+              "isFavorite": false,
+              "name": "Luke",
+              "planet": "Tatioone",
+              "population": 20000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "die hard",
+              ],
+              "isFavorite": true,
+              "name": "Leia",
+              "planet": "Alderaan",
+              "population": 230000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "lawrence of arabia",
+              ],
+              "isFavorite": false,
+              "name": "Obi-wan",
+              "planet": "Whereever he is from",
+              "population": 40000,
+              "species": "human",
+            },
+            Object {
+              "films": Array [
+                "punch drunk love",
+              ],
+              "isFavorite": true,
+              "name": "Darth Vadar",
+              "planet": "Tatioone",
+              "population": 50000,
+              "species": "robot",
+            },
+            Object {
+              "films": Array [
+                "cinderella",
+              ],
+              "isFavorite": false,
+              "name": "Han",
+              "planet": "Millenium Falcon",
+              "population": 60000,
+              "species": "human",
+            },
+          ],
+          "episode_id": 8,
+          "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
+          "release_date": "2006-07-05",
+          "scroll": "words words words",
+          "title": "the f8 of the furious",
+        },
+      ]
+    }
+  />
+  <BBAnimated />
 </section>
 `;

@@ -20,7 +20,7 @@ export default class CharacterBox extends Component {
       })
     })
 
-    const characterFacts = Promise.all(characterPromises)
+    return Promise.all(characterPromises)
       .then(promises => promises.map(promise => {
 
         const characterName = promise.name;
@@ -46,11 +46,12 @@ export default class CharacterBox extends Component {
         Promise.all(filmsPromises)
         .then(data => {return data})
 
-        const characterInfo =
-        Promise.all([speciesFetch, planetFetch, filmsFetch])
+        return Promise.all([speciesFetch, planetFetch, filmsFetch])
         .then(info => {return {name: characterName, species: info[0], planet: info[1].planetName, population: info[1].planetPopulation, films: info[2]}})
         .then(characterStats => {this.setState({characters: [...this.state.characters, characterStats]})})
       }))
+
+
     }
 
 
@@ -59,7 +60,7 @@ export default class CharacterBox extends Component {
       const isFavorite = !!this.props.favorites.find(fav => fav.name === character.name)
       return (
         <CharacterCard
-          key={'card-' + ind+1}
+          key={'card' + ind+1}
           isFavorite={isFavorite}
           character={character}
           addFavorite={this.props.addFavorite}

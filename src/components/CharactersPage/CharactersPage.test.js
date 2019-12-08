@@ -1,15 +1,43 @@
-import React from 'react';
-import CharactersPage from './CharactersPage';
-import { shallow } from 'enzyme';
+import React from 'react'
+import CharactersPage from './CharactersPage'
+import movieResults from '../../mockData/fakeMovies.js'
+import { getMoviesData } from '../../apiCalls/apiCalls'
+import { shallow } from 'enzyme'
 
 describe('CharactersPage', () => {
-  it('should render CharactersPage', () => {
-    const wrapper = shallow(
+  let wrapper
+  const addMovies = jest.fn()
+
+  beforeEach(() => {
+    wrapper = shallow(
       <CharactersPage
-        sharedData={{episode: 1, title: "fast and furious"}}
-        user={{name: "The Rock"}}
+        id={2}
+        movie={movieResults[0]}
+        user={{
+          name: 'Taylor Swift',
+          quote: "I find your lack of faith disturbing",
+          rank: 'intermediate'}}
         logOut={jest.fn()}
+        addMovies={addMovies}
+        movies={movieResults}
+        favorites={[]}
+        addFavorite={jest.fn()}
+        removeFavorite={jest.fn()}
       />
     )
+  })
+
+  it('should match snapshot with all data passed in correctly', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should match snapshot if no movie data was passed', () => {
+    const wrapperWithoutProps = shallow(
+      <CharactersPage addMovies={addMovies}/>)
+    expect(wrapperWithoutProps).toMatchSnapshot()
+  })
+
+  it('should call addMovies prop after rendering', () => {
+    expect(addMovies).toHaveBeenCalled()
   })
 })

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteFilter should render FavoritesFilter with Redirect component if toFavorite state is true 1`] = `
+<Redirect
+  to="/favorites"
+/>
+`;
+
+exports[`FavoriteFilter should render FavoritesFilter with all data passed in correctly and toFavorite state is false 1`] = `
+<button
+  className="filter-button "
+  onClick={[Function]}
+>
+  see favorite characters (
+  2
+  )
+</button>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render Header with all data passed in correctly 1`] = `
+<header
+  className="header"
+>
+  <h2>
+    Episode 1: Revenge of the Sloths
+  </h2>
+  <UserProfile
+    logOut={[MockFunction]}
+    name="Taylor Swift"
+    quote="I find your lack of faith disturbing"
+    rank="intermediate"
+  />
+</header>
+`;

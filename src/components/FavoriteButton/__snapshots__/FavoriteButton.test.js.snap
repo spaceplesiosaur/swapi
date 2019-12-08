@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteButton if isFavorite prop is false should render FavoriteButton with all data passed in correctly and if isFavorite props is false 1`] = `
+<img
+  alt="star"
+  className="star-button"
+  onClick={[Function]}
+  role="button"
+  src="star.svg"
+/>
+`;
+
+exports[`FavoriteButton should render FavoriteButton with all data passed in correctly and if isFavorite props is true 1`] = `
+<img
+  alt="star"
+  className="star-button"
+  onClick={[Function]}
+  role="button"
+  src="full-star.svg"
+/>
+`;

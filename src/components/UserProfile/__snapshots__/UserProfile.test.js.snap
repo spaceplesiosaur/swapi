@@ -13,11 +13,15 @@ exports[`UserProfile should render UserProfile 1`] = `
   />
   <section>
     <h3>
+      The Rock
       <span>
          
+        expert
       </span>
     </h3>
-    <p />
+    <p>
+      I hate sand
+    </p>
     <button
       onClick={[MockFunction]}
     >

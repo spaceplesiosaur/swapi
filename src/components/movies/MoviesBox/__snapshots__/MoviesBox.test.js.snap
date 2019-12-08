@@ -3,5 +3,16 @@
 exports[`MoviesBox should render MoviesBox 1`] = `
 <section
   className="movie-box"
-/>
+>
+  <MovieCard
+    director="The Rock"
+    episode_id={4}
+    id={1}
+    key="0"
+    opening_crawl="paaaam-pam paaaaam-pam pa-pa-paaaam"
+    producer="Mr. Tumnus"
+    release_date="1977-05-25"
+    title="A Star War"
+  />
+</section>
 `;
