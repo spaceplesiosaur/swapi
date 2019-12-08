@@ -2,14 +2,14 @@ import React from 'react'
 import characterResults from '../../mockData/fakeCharacters.js'
 import movieResults from '../../mockData/fakeMovies.js'
 import { shallow } from 'enzyme'
-import CharacterCard from './CharacterCard'
+import FavoriteCharacters from './FavoriteCharacters'
 
-describe('CharacterCard', () => {
+describe('FavoriteCharacters', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <CharacterCard
+      <FavoriteCharacters
         key={'card1'}
         isFavorite={false}
         character={characterResults[0]}
@@ -18,7 +18,7 @@ describe('CharacterCard', () => {
       />);
   })
 
-  it('should render CharacterCard with all data passed in correctly', () => {
+  it('should render FavoriteCharacters with all data passed in correctly', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })

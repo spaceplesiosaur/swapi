@@ -77,9 +77,9 @@ describe("App", () => {
     const mockUnfavorite1 = characterResults[1];
     const mockUnfavorite2 = characterResults[2];
     const expected = [
-      {name: "Luke", species: "human", planet: "Tatioone", population: 20000, films: ['bambi', 'little women', 'sound of music']},
-      {name: "Darth Vadar", species: "robot", planet: "Tatioone", population: 50000, films: ['punch drunk love']},
-      {name: "Han", species: "human", planet: "Millenium Falcon", population: 60000, films:['cinderella']}
+      {name: "Luke", species: "human", planet: "Tatioone", population: 20000, films: ['bambi', 'little women', 'sound of music'], isFavorite: false},
+      {name: "Darth Vadar", species: "robot", planet: "Tatioone", population: 50000, films: ['punch drunk love'], isFavorite: true},
+      {name: "Han", species: "human", planet: "Millenium Falcon", population: 60000, films:['cinderella'], isFavorite: false}
     ];
 
     wrapper.instance().setState({movies: movieResults, favorites: mockFavorites});

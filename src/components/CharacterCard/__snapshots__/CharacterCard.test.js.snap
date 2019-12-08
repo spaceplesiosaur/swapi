@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCard should render CharacterCard with all data passed in correctly 1`] = `
+<section
+  className="character-card"
+>
+  <FavoriteButton
+    addFavorite={[MockFunction]}
+    card={
+      Object {
+        "films": Array [
+          "bambi",
+          "little women",
+          "sound of music",
+        ],
+        "isFavorite": false,
+        "name": "Luke",
+        "planet": "Tatioone",
+        "population": 20000,
+        "species": "human",
+      }
+    }
+    isFavorite={false}
+    removeFavorite={[MockFunction]}
+    toggleCard={[Function]}
+  />
+  <header>
+    <h3>
+      Luke
+    </h3>
+    <p>
+      human
+    </p>
+  </header>
+  <div
+    className="character-card-planet"
+  >
+    <p>
+      Tatioone
+    </p>
+    <p>
+      20000
+    </p>
+  </div>
+  <ul
+    className="character-card-movies"
+  >
+    <h4>
+      Movies:
+    </h4>
+    <li>
+      bambi
+    </li>
+    <li>
+      little women
+    </li>
+    <li>
+      sound of music
+    </li>
+  </ul>
+</section>
+`;
