@@ -10,6 +10,7 @@ const FavoritesPage = (props) => {
       <Header
         headerText={"My Favorite Characters"}
         user={props.user}
+        logOut={props.logOut}
       />
       <FavoriteCharacters
         favorites={props.favorites}

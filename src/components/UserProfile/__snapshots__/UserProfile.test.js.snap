@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UserProfile should match snapshot if toLoginPage state is true 1`] = `
+<Redirect
+  to="/"
+/>
+`;
+
 exports[`UserProfile should render UserProfile 1`] = `
 <section
   className="user-profile"
@@ -23,7 +29,7 @@ exports[`UserProfile should render UserProfile 1`] = `
       I hate sand
     </p>
     <button
-      onClick={[MockFunction]}
+      onClick={[Function]}
     >
       Log Out
     </button>

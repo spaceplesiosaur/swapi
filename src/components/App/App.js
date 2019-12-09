@@ -95,6 +95,7 @@ export default class App extends Component {
           <Route exact path='/favorites' render={() => <FavoritesPage
             user={this.state.user}
             favorites={this.state.favorites}
+            logOut={this.logOut}
             removeFavorite={this.removeFavorite}
             />} />
 
