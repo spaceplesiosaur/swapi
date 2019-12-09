@@ -10,3 +10,10 @@ export const getMoviesData = () => {
       return a.episode_id - b.episode_id
     }))
 }
+
+export const getCharacterData = (array) => {
+  return array.map((character, index) => {
+    return fetch(character)
+    .then(response => response.json())
+  })
+}
