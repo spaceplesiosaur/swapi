@@ -4,6 +4,7 @@ exports[`Header should render Header with all data passed in correctly 1`] = `
 <header
   className="header"
 >
+  <BackButton />
   <h2>
     Episode 1: Revenge of the Sloths
   </h2>

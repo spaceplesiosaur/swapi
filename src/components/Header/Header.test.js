@@ -13,6 +13,7 @@ describe('Header', () => {
           rank: 'intermediate'}}
         logOut={jest.fn()}
         headerText={'Episode 1: Revenge of the Sloths'}
+        isButton={true}
       />)
 
     expect(wrapper).toMatchSnapshot()

@@ -6,6 +6,7 @@ exports[`FavoritesPage should render FavoritesPage with all data passed in corre
 >
   <Header
     headerText="My Favorite Characters"
+    isButton={true}
     user={
       Object {
         "name": "Taylor Swift",
