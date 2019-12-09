@@ -79,7 +79,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 1,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "1999-07-05",
-          "scroll": "words words words",
           "title": "the fast and the furious",
         },
         Object {
@@ -140,7 +139,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 2,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "2000-07-05",
-          "scroll": "words words words",
           "title": "2 fast 2 furious",
         },
         Object {
@@ -201,7 +199,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 3,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "2001-07-05",
-          "scroll": "words words words",
           "title": "Tokyo Drift",
         },
         Object {
@@ -262,7 +259,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 4,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "2002-07-05",
-          "scroll": "words words words",
           "title": "fast & furious",
         },
         Object {
@@ -323,7 +319,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 5,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "2003-07-05",
-          "scroll": "words words words",
           "title": "fast 5",
         },
         Object {
@@ -384,7 +379,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 6,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "2004-07-05",
-          "scroll": "words words words",
           "title": "furious 6",
         },
         Object {
@@ -445,7 +439,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 7,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "2005-07-05",
-          "scroll": "words words words",
           "title": "furious 7",
         },
         Object {
@@ -506,7 +499,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
           "episode_id": 8,
           "opening_crawl": "paaaam-pam paaaaam-pam pa-pa-paaaam",
           "release_date": "2006-07-05",
-          "scroll": "words words words",
           "title": "the f8 of the furious",
         },
       ]
