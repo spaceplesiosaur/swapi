@@ -14,6 +14,12 @@ describe('LoginForm', () => {
     expect(form).toMatchSnapshot()
   })
 
+  it ('should match the snapshot if toMoviesPage state is true', () => {
+    form.setState({toMoviesPage: true})
+    
+    expect(form).toMatchSnapshot()
+  })
+
   it ('should match the snapshot with error notification', () => {
     form.setState({error: true})
 
@@ -53,39 +59,26 @@ describe('LoginForm', () => {
   describe("submitUser", () => {
 
     it('should call submitUser when button was clicked', () => {
-      const spy = jest.spyOn(form.instance(), 'submitUser').mockImplementation(() => {});
-      form.instance().forceUpdate();
+      const spy = jest.spyOn(form.instance(), 'submitUser').mockImplementation(() => {})
+      form.instance().forceUpdate()
 
       form.find('button').simulate(
         'click',
         {preventDefault: jest.fn()}
-      );
+      )
 
-      expect(spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalled()
     })
 
-    it('should call checkError when button was clicked', () => {
-      const spy = jest.spyOn(form.instance(), 'checkError').mockImplementation(() => {});
-      form.instance().forceUpdate();
+    it('should call checkError when submitUser is called', () => {
+      const spy = jest.spyOn(form.instance(), 'checkError').mockImplementation(() => {})
+      form.instance().forceUpdate()
 
-      form.find('button').simulate(
-        'click',
+      form.instance().submitUser(
         {preventDefault: jest.fn()}
-      );
+      )
 
-      expect(spy).toHaveBeenCalled();
-    })
-
-    it('should call addUser prop when button was clicked and all inputs are filled out', () => {
-
-      form.setState({name: 'Yoda', quote: 'Do. Or do not. There is no try.'})
-
-      form.find('button').simulate(
-        'click',
-        {preventDefault: jest.fn()}
-      );
-
-      expect(addUser).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalled()
     })
 
     it('should set error to state when button was clicked but all inputs are not filled out', () => {
@@ -99,6 +92,49 @@ describe('LoginForm', () => {
 
       expect(form.state('error')).toEqual(true)
 
+    })
+
+    describe("redirect", () => {
+
+      it('should call redirect method if submitUser is called and all inputs are filled out', () => {
+        const spy = jest.spyOn(form.instance(), 'redirect').mockImplementation(() => {})
+        form.instance().forceUpdate()
+
+        form.setState({data: {
+          name: 'Yoda',
+          quote: 'Do. Or do not. There is no try.'
+        }})
+
+        form.instance().submitUser(
+          {preventDefault: jest.fn()}
+        )
+
+        expect(spy).toHaveBeenCalled()
+      })
+
+      it('should call addUser prop if redirect is called', () => {
+        form.instance().redirect()
+
+        expect(addUser).toHaveBeenCalled()
+      })
+
+      it('should call clearInputs method if redirect is called', () => {
+        const spy = jest.spyOn(form.instance(), 'clearInputs').mockImplementation(() => {})
+        form.instance().forceUpdate()
+
+        form.instance().redirect()
+
+        expect(spy).toHaveBeenCalled()
+      })
+
+      it('should change toMoviesPage state if redirect is called', () => {
+
+        expect(form.state('toMoviesPage')).toEqual(false)
+
+        form.instance().redirect()
+
+        expect(form.state('toMoviesPage')).toEqual(true)
+      })
     })
   })
 })

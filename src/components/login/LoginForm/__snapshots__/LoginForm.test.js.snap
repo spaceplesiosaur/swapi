@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LoginForm should match the snapshot if toMoviesPage state is true 1`] = `
+<Redirect
+  to="/movies"
+/>
+`;
+
 exports[`LoginForm should match the snapshot with all data passed in correctly 1`] = `
 <form
   className="login-form"
@@ -44,12 +50,7 @@ exports[`LoginForm should match the snapshot with all data passed in correctly 1
   <button
     onClick={[Function]}
   >
-    <NavLink
-      className="login"
-      to="/movies"
-    >
-      Submit
-    </NavLink>
+    Submit
   </button>
 </form>
 `;
@@ -99,12 +100,7 @@ exports[`LoginForm should match the snapshot with error notification 1`] = `
   <button
     onClick={[Function]}
   >
-    <NavLink
-      className="login"
-      to="/movies"
-    >
-      Submit
-    </NavLink>
+    Submit
   </button>
 </form>
 `;
