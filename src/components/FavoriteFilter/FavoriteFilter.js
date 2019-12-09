@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import './FavoriteFilter.scss'
 import { Redirect } from 'react-router-dom'
+import './FavoriteFilter.scss'
 
 class FavoriteFilter extends Component {
   constructor(props) {
