@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './FavoriteButton.scss'
 import emptyStar from '../../images/star.svg'
 import fullStar from '../../images/full-star.svg'
@@ -26,3 +27,11 @@ const FavoriteButton = (props) => {
 }
 
 export default FavoriteButton
+
+FavoriteButton.propTypes = {
+  card: PropTypes.object,
+  isFavorite: PropTypes.bool,
+  toggleCar: PropTypes.func,
+  addFavorite: PropTypes.func,
+  removeFavorite: PropTypes.func
+}

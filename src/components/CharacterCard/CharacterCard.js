@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './CharacterCard.scss';
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
+import PropTypes from 'prop-types'
 
 class CharacterCard extends Component {
   constructor(props) {
@@ -48,3 +49,10 @@ class CharacterCard extends Component {
 }
 
 export default CharacterCard;
+
+CharacterCard.propTypes = {
+  isFavorite: PropTypes.bool,
+  character: PropTypes.object,
+  addFavorite: PropTypes.func,
+  removeFavorite: PropTypes.func
+}

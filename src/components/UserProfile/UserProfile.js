@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './UserProfile.scss'
 import userImage from '../../images/death-star.svg'
 
@@ -36,3 +37,8 @@ class UserProfile extends Component {
 
 
 export default UserProfile;
+
+UserProfile.propTypes = {
+  user: PropTypes.object,
+  logOut: PropTypes.func
+}

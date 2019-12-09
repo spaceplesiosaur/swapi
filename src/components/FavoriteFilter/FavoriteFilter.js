@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './FavoriteFilter.scss'
 
 class FavoriteFilter extends Component {
@@ -27,3 +28,7 @@ class FavoriteFilter extends Component {
 }
 
 export default FavoriteFilter
+
+FavoriteFilter.propTypes = {
+  number: PropTypes.number
+}

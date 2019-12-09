@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './MovieCard.scss'
 
 class MovieCard extends Component {
@@ -33,3 +34,8 @@ class MovieCard extends Component {
 
 
 export default MovieCard
+
+MovieCard.propTypes = {
+  id: PropTypes.number,
+  movie: PropTypes.object
+}

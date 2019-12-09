@@ -3,6 +3,7 @@ import CharacterBox from '../CharacterBox/CharacterBox'
 import './CharactersPage.scss'
 import Header from '../Header/Header'
 import FavoriteFilter from '../FavoriteFilter/FavoriteFilter'
+import PropTypes from 'prop-types'
 
 export default class CharactersPage extends Component {
   constructor(props) {
@@ -44,4 +45,16 @@ export default class CharactersPage extends Component {
       </section>
     )
   }
+}
+
+CharactersPage.propTypes = {
+  id: PropTypes.string,
+  movie: PropTypes.object,
+  user: PropTypes.object,
+  logOut: PropTypes.func,
+  addMovies: PropTypes.func,
+  movies: PropTypes.array,
+  favorites: PropTypes.array,
+  addFavorite: PropTypes.func,
+  removeFavorite: PropTypes.func
 }

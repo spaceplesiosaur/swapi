@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import './LoginRadioButton.scss'
 
 const LoginRadioButton = ({type, currentRank, toggleChangeState}) => {
@@ -20,3 +21,9 @@ const LoginRadioButton = ({type, currentRank, toggleChangeState}) => {
 }
 
 export default LoginRadioButton
+
+LoginRadioButton.propTypes = {
+  type: PropTypes.string,
+  currentRank: PropTypes.string,
+  toggleChangeState: PropTypes.func
+}

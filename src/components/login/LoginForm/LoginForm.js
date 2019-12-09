@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './LoginForm.scss'
 import LoginInput from '../LoginInput/LoginInput'
 import LoginRadioButton from '../LoginRadioButton/LoginRadioButton'
@@ -90,4 +91,8 @@ export default class LoginForm extends Component {
         </form>
     )
   }
+}
+
+LoginForm.proptTypes = {
+  addUser: PropTypes.func
 }

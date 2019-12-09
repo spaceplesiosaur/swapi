@@ -1,5 +1,6 @@
 import React from 'react'
 import CharacterCard from '../../CharacterCard/CharacterCard'
+import PropTypes from 'prop-types'
 import './FavoriteCharacters.scss'
 
 const FavoriteCharacters = ({favorites, removeFavorite}) => {
@@ -20,3 +21,8 @@ const FavoriteCharacters = ({favorites, removeFavorite}) => {
 }
 
 export default FavoriteCharacters
+
+FavoriteCharacters.propTypes = {
+  favorites: PropTypes.array,
+  removeFavorite: PropTypes.func
+}

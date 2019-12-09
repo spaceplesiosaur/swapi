@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../Header/Header'
 import MoviesBox from '../MoviesBox/MoviesBox'
+import PropTypes from 'prop-types'
 import './MoviesPage.scss'
 import BBAnimated from '../../BBAnimated/BBAnimated'
 
@@ -23,3 +24,11 @@ const MoviesPage = (props) => {
 }
 
 export default MoviesPage
+
+MoviesPage.propTypes = {
+  sys: PropTypes.object,
+  user: PropTypes.object,
+  logOut: PropTypes.func,
+  movies: PropTypes.array,
+  addMovies: PropTypes.func
+}
