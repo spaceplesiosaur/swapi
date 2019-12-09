@@ -87,9 +87,9 @@ export default class CharacterBox extends Component {
 }
 
 CharacterBox.propTypes = {
-  favorites: PropTypes.array,
-  characters: PropTypes.array,
-  addMovies: PropTypes.func,
-  addFavorite: PropTypes.func,
-  removeFavorite: PropTypes.func,
+  favorites: PropTypes.array.isRequired,
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  addMovies: PropTypes.func.isRequired,
+  addFavorite: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired,
 }

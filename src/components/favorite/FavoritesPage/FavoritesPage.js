@@ -25,8 +25,8 @@ const FavoritesPage = (props) => {
 export default FavoritesPage;
 
 FavoritesPage.propTypes = {
-  user: PropTypes.object,
-  favorites: PropTypes.array,
-  logOut: PropTypes.func,
-  removeFavorite: PropTypes.func
+  user: PropTypes.object.isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  logOut: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired
 }

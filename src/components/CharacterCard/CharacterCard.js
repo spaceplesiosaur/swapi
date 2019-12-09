@@ -51,8 +51,8 @@ class CharacterCard extends Component {
 export default CharacterCard;
 
 CharacterCard.propTypes = {
-  isFavorite: PropTypes.bool,
-  character: PropTypes.object,
-  addFavorite: PropTypes.func,
-  removeFavorite: PropTypes.func
+  isFavorite: PropTypes.bool.isRequired,
+  character: PropTypes.object.isRequired,
+  addFavorite: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired
 }

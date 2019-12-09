@@ -39,6 +39,8 @@ class UserProfile extends Component {
 export default UserProfile;
 
 UserProfile.propTypes = {
-  user: PropTypes.object,
-  logOut: PropTypes.func
+  name: PropTypes.string.isRequired,
+  rank: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
+  logOut: PropTypes.func.isRequired
 }

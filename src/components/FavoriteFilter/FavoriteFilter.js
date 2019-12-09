@@ -30,5 +30,5 @@ class FavoriteFilter extends Component {
 export default FavoriteFilter
 
 FavoriteFilter.propTypes = {
-  number: PropTypes.number
+  number: PropTypes.number.isRequired
 }

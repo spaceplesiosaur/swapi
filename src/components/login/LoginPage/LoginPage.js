@@ -15,5 +15,5 @@ const LoginPage = ({addUser}) => {
 export default LoginPage;
 
 LoginPage.propTypes = {
-  addUser: PropTypes.func
+  addUser: PropTypes.func.isRequired
 }

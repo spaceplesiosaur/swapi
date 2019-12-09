@@ -22,7 +22,7 @@ const LoginInput = ({type, value, toggleChangeState}) => {
 export default LoginInput
 
 LoginInput.propTypes = {
-  type: PropTypes.string,
-  value: PropTypes.string,
-  toggleChangeState: PropTypes.func
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  toggleChangeState: PropTypes.func.isRequired
 }

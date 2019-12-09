@@ -29,9 +29,9 @@ const FavoriteButton = (props) => {
 export default FavoriteButton
 
 FavoriteButton.propTypes = {
-  card: PropTypes.object,
-  isFavorite: PropTypes.bool,
-  toggleCar: PropTypes.func,
-  addFavorite: PropTypes.func,
-  removeFavorite: PropTypes.func
+  card: PropTypes.object.isRequired,
+  isFavorite: PropTypes.bool.isRequired,
+  toggleCard: PropTypes.func.isRequired,
+  addFavorite: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired
 }

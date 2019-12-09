@@ -21,8 +21,8 @@ const Header = (props) => {
 export default Header
 
 Header.propTypes = {
-  user: PropTypes.object,
-  logOut: PropTypes.func,
-  headerText: PropTypes.string,
+  user: PropTypes.object.isRequired,
+  logOut: PropTypes.func.isRequired,
+  headerText: PropTypes.string.isRequired,
   isButton: PropTypes.bool
 }

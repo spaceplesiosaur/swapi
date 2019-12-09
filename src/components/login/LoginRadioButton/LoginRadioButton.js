@@ -23,7 +23,7 @@ const LoginRadioButton = ({type, currentRank, toggleChangeState}) => {
 export default LoginRadioButton
 
 LoginRadioButton.propTypes = {
-  type: PropTypes.string,
-  currentRank: PropTypes.string,
-  toggleChangeState: PropTypes.func
+  type: PropTypes.string.isRequired,
+  currentRank: PropTypes.string.isRequired,
+  toggleChangeState: PropTypes.func.isRequired
 }

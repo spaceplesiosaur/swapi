@@ -48,13 +48,13 @@ export default class CharactersPage extends Component {
 }
 
 CharactersPage.propTypes = {
-  id: PropTypes.string,
-  movie: PropTypes.object,
-  user: PropTypes.object,
-  logOut: PropTypes.func,
-  addMovies: PropTypes.func,
-  movies: PropTypes.array,
-  favorites: PropTypes.array,
-  addFavorite: PropTypes.func,
-  removeFavorite: PropTypes.func
+  id: PropTypes.string.isRequired,
+  movie: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
+  logOut: PropTypes.func.isRequired,
+  addMovies: PropTypes.func.isRequired,
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  addFavorite: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired
 }

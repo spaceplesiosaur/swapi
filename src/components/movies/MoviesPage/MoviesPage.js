@@ -26,9 +26,9 @@ const MoviesPage = (props) => {
 export default MoviesPage
 
 MoviesPage.propTypes = {
-  sys: PropTypes.object,
-  user: PropTypes.object,
-  logOut: PropTypes.func,
-  movies: PropTypes.array,
-  addMovies: PropTypes.func
+  sys: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
+  logOut: PropTypes.func.isRequired,
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  addMovies: PropTypes.func.isRequired
 }

@@ -36,6 +36,10 @@ class MovieCard extends Component {
 export default MovieCard
 
 MovieCard.propTypes = {
-  id: PropTypes.number,
-  movie: PropTypes.object
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  release_date: PropTypes.string.isRequired,
+  episode_id: PropTypes.number.isRequired,
+  opening_crawl: PropTypes.string.isRequired,
+  characters: PropTypes.arrayOf(PropTypes.string).isRequired
 }
