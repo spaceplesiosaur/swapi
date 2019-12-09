@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import CharacterCard from '../CharacterCard/CharacterCard'
-import fakeCharacters from '../../mockData/fakeCharacters.js'
 import { getAnyData } from '../../apiCalls/apiCalls'
 import './CharacterBox.scss'
 
@@ -34,14 +33,17 @@ export default class CharacterBox extends Component {
     }
 
   nestedCharacterFetch = (promise) => {
-    const name = promise.name;
-    return Promise.all([this.speciesFetch(promise.species), this.planetFetch(promise.homeworld), this.filmsFetch(promise.films)])
-      .then(info => {
+    const { name, species, films, homeworld} = promise
+    return Promise.all([
+      this.speciesFetch(species),
+      this.planetFetch(homeworld),
+      this.filmsFetch(films)
+    ]).then(info => {
         return {name, ...info[0], ...info[1], ...info[2]}
       })
-        .then(characterStats => {
-          this.setState({characters: [...this.state.characters, characterStats]})
-        })
+      .then(characterStats => {
+        this.setState({characters: [...this.state.characters, characterStats]})
+      })
   }
 
   makePromises = (listOfPromises) => {
