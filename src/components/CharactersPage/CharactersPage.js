@@ -48,7 +48,7 @@ CharactersPage.propTypes = {
   user: PropTypes.object.isRequired,
   logOut: PropTypes.func.isRequired,
   addMovies: PropTypes.func.isRequired,
-  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object),
   addFavorite: PropTypes.func.isRequired,
   removeFavorite: PropTypes.func.isRequired
 }

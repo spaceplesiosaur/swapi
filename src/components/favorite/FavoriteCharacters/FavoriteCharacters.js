@@ -23,6 +23,6 @@ const FavoriteCharacters = ({favorites, removeFavorite}) => {
 export default FavoriteCharacters
 
 FavoriteCharacters.propTypes = {
-  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object),
   removeFavorite: PropTypes.func.isRequired
 }

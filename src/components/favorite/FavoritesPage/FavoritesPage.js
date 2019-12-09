@@ -26,7 +26,7 @@ export default FavoritesPage;
 
 FavoritesPage.propTypes = {
   user: PropTypes.object.isRequired,
-  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object),
   logOut: PropTypes.func.isRequired,
   removeFavorite: PropTypes.func.isRequired
 }
