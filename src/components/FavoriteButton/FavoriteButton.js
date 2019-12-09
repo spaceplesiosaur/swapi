@@ -32,6 +32,6 @@ FavoriteButton.propTypes = {
   card: PropTypes.object.isRequired,
   isFavorite: PropTypes.bool.isRequired,
   toggleCard: PropTypes.func.isRequired,
-  addFavorite: PropTypes.func.isRequired,
+  addFavorite: PropTypes.func,
   removeFavorite: PropTypes.func.isRequired
 }

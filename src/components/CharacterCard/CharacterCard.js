@@ -53,6 +53,6 @@ export default CharacterCard;
 CharacterCard.propTypes = {
   isFavorite: PropTypes.bool.isRequired,
   character: PropTypes.object.isRequired,
-  addFavorite: PropTypes.func.isRequired,
+  addFavorite: PropTypes.func,
   removeFavorite: PropTypes.func.isRequired
 }
