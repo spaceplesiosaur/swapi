@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton should match snapshot if isRedirected state is false 1`] = `
+<button
+  className="back-btn"
+  onClick={[Function]}
+>
+  back to all movies
+</button>
+`;
+
+exports[`BackButton should match snapshot if isRedirected state is true 1`] = `
+<Redirect
+  to="/movies"
+/>
+`;

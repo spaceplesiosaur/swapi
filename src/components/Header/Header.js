@@ -1,10 +1,13 @@
 import React from 'react'
-import UserProfile from '../UserProfile/UserProfile'
 import './Header.scss'
+import UserProfile from '../UserProfile/UserProfile'
+import BackButton from '../BackButton/BackButton'
 
-const Header = ({headerText, user, logOut}) => {
+const Header = (props) => {
+  const { headerText, user, logOut, isButton } = props
   return (
     <header className="header">
+      {isButton && <BackButton />}
       <h2>{headerText}</h2>
       <UserProfile
         {...user}

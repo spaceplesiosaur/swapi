@@ -8,6 +8,7 @@ exports[`CharactersPage should match snapshot with all data passed in correctly 
 >
   <Header
     headerText="Episode 1: the fast and the furious"
+    isButton={true}
     logOut={[MockFunction]}
     user={
       Object {

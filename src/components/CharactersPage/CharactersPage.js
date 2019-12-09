@@ -20,7 +20,8 @@ export default class CharactersPage extends Component {
         <Header
           user={this.props.user}
           logOut={this.props.logOut}
-          headerText={`Episode ${this.props.movie.episode_id}: ${this.props.movie.title}`} />
+          headerText={`Episode ${this.props.movie.episode_id}: ${this.props.movie.title}`}
+          isButton={true} />
         <main className="crawl-text">
           <section>
             <div>
