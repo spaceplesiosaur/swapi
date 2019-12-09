@@ -1,24 +1,35 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import './MovieCard.scss'
 
-const MovieCard = (props) => {
-  const year = props.release_date.split('-')[0]
+class MovieCard extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      toCharactersPage: false
+    }
+  }
 
-  return (
-    <section className="movie-card">
-      <h3>Episode {props.id}</h3>
-      <h4>{props.title}</h4>
-      <p>{year}</p>
+  redirect = () => {
+    this.setState({toCharactersPage: true})
+  }
 
-      <button>
-        <NavLink
-          to={`/movies/${props.id}`}
-          key={props.id}
-          className="view-chr">View characters</NavLink>
-      </button>
-    </section>
-  )
+  render() {
+    const year = this.props.release_date.split('-')[0]
+
+    return (
+      (this.state.toCharactersPage)
+        ? <Redirect to={`/movies/${this.props.id}`} />
+        : <section className="movie-card">
+          <h3>Episode {this.props.id}</h3>
+          <h4>{this.props.title}</h4>
+          <p>{year}</p>
+          <button onClick={this.redirect}>View characters</button>
+        </section>
+    )
+  }
 }
 
-export default MovieCard;
+
+
+export default MovieCard

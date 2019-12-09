@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MovieCard should match snapshot if toCharactersPage state is true 1`] = `
+<Redirect
+  to="/movies/1"
+/>
+`;
+
 exports[`MovieCard should render MovieCard 1`] = `
 <section
   className="movie-card"
@@ -14,14 +20,10 @@ exports[`MovieCard should render MovieCard 1`] = `
   <p>
     2000
   </p>
-  <button>
-    <NavLink
-      className="view-chr"
-      key="1"
-      to="/movies/1"
-    >
-      View characters
-    </NavLink>
+  <button
+    onClick={[Function]}
+  >
+    View characters
   </button>
 </section>
 `;

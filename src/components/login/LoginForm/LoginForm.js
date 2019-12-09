@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router-dom'
 import './LoginForm.scss'
 import LoginInput from '../LoginInput/LoginInput'
 import LoginRadioButton from '../LoginRadioButton/LoginRadioButton'
@@ -14,6 +14,7 @@ export default class LoginForm extends Component {
         quote: '',
         rank: 'novice'
       },
+      toMoviesPage: false,
       error: false
     }
   }
@@ -34,19 +35,21 @@ export default class LoginForm extends Component {
 
   submitUser = (event) => {
     event.preventDefault()
-    if (!this.checkError()) {
-      this.props.addUser({...this.state.data})
-      this.clearInputs()
-    } else {
-      this.setState({...this.state, error: true})
-    }
+    return (!this.checkError())
+      ? this.redirect()
+      : this.setState({...this.state, error: true})
+  }
+
+  redirect = () => {
+    this.props.addUser({...this.state.data})
+    this.clearInputs()
+    this.setState({toMoviesPage: true})
   }
 
   checkError = () => {
     const valName = this.state.data.name.replace(' ', '') === ''
     const valQuote = this.state.data.quote.replace(' ', '') === ''
-    const result = (valName || valQuote) ? true : false
-    return result
+    return (valName || valQuote)
   }
 
   clearInputs = () => {
@@ -54,7 +57,6 @@ export default class LoginForm extends Component {
   }
 
   render() {
-    const error = (this.state.error) ? <ErrorNotification /> : null
 
     const inputs = ['name', 'quote'].map(key => {
       const type = (key !== 'name') ? 'favorite quote' : key
@@ -75,17 +77,17 @@ export default class LoginForm extends Component {
     ))
 
     return (
-      <form className="login-form">
-        <h1>SWAPI Trivia</h1>
-          {error}
-          {inputs}
-        <section className="login-radio-buttons">
-          {radios}
-        </section>
-        <button onClick={this.submitUser}>
-          <NavLink to='/movies' className="login">Submit</NavLink>
-        </button>
-      </form>
+      (this.state.toMoviesPage)
+        ? <Redirect to='/movies' />
+        : <form className="login-form">
+          <h1>SWAPI Trivia</h1>
+            {this.state.error && <ErrorNotification />}
+            {inputs}
+          <section className="login-radio-buttons">
+            {radios}
+          </section>
+          <button onClick={this.submitUser}>Submit</button>
+        </form>
     )
   }
 }
