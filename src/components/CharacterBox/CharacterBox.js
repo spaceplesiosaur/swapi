@@ -13,7 +13,7 @@ export default class CharacterBox extends Component {
   }
 
   componentDidMount() {
-    return this.addCharacters()
+    this.addCharacters()
   }
 
   speciesFetch = (url) => {
@@ -39,7 +39,8 @@ export default class CharacterBox extends Component {
       this.speciesFetch(species),
       this.planetFetch(homeworld),
       this.filmsFetch(films)
-    ]).then(info => {
+    ])
+      .then(info => {
         return {name, ...info[0], ...info[1], ...info[2]}
       })
       .then(characterStats => {
