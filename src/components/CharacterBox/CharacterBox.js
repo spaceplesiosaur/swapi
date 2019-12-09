@@ -13,76 +13,51 @@ export default class CharacterBox extends Component {
   }
 
   componentDidMount() {
+    return this.addCharacters()
+  }
+
+  speciesFetch = (url) => {
+    return getAnyData(url, 'species')
+    .then(data => {return {species: data.name}})
+  }
+
+  planetFetch = (url) => {
+    return getAnyData(url, 'planet')
+    .then(data => {return {planet: data.name, population: data.population}})
+  }
+
+  filmsFetch = (url) => {
+    return Promise.all(url.map((film, index) => {
+      return getAnyData(film, `accociated film ${index + 1}`)
+      .then(data => data.title)}))
+      .then(data => {return {films: data}})
+    }
+
+  nestedCharacterFetch = (promise) => {
+    const name = promise.name;
+    return Promise.all([this.speciesFetch(promise.species), this.planetFetch(promise.homeworld), this.filmsFetch(promise.films)])
+      .then(info => {
+        return {name, ...info[0], ...info[1], ...info[2]}
+      })
+      .then(characterStats => {
+        this.setState({characters: [...this.state.characters, characterStats]})
+      })
+  }
+
+  makePromises = (listOfPromises) => {
+    return Promise.all(listOfPromises)
+      .then(promises => promises.map(promise => {
+        return this.nestedCharacterFetch(promise)
+      }))
+    }
+
+  addCharacters = () => {
     const limitedCharacters = this.props.characters.slice(0, 10);
     const characterPromises = limitedCharacters.map((character, index) => {
       return getAnyData(character, 'Character');
     })
-
-    const makePromises = Promise.all(characterPromises)
-      .then(promises => promises.map(promise => {
-
-        const characterName = promise.name;
-        const speciesFetch = getAnyData(promise.species, 'Species').then(data => data.name)
-        const planetFetch = getAnyData(promise.homeworld, 'Planet').then(data => {return {planetName: data.name, planetPopulation: data.population}})
-        const filmsFetch = Promise.all(promise.films.map((film, index) => {
-          return getAnyData(film, `accociated film ${index + 1}`)
-          .then(data => data.title)}))
-          .then(data => {return data})
-
-
-        return Promise.all([speciesFetch, planetFetch, filmsFetch])
-        .then(info => {
-          // NOTE: I need scrshot of it
-          console.log('INFOOOO', info)  
-          return {name: characterName, species: info[0], planet: info[1].planetName, population: info[1].planetPopulation, films: info[2]}})
-        .then(characterStats => {this.setState({characters: [...this.state.characters, characterStats]})})
-    }))
+    this.makePromises(characterPromises )
   }
-
-  // componentDidMount = () => {
-  //   const limitedCharacters = this.props.characters.slice(0, 10)
-  //   const characterPromises = limitedCharacters.map(character => {
-  //     return fetch(character)
-  //     .then(response => response.json())
-  //     .catch(err => {
-  //       this.setState({characters: [...this.state.characters, character]})
-  //     })
-  //   })
-  //
-  //   return Promise.all(characterPromises)
-  //     .then(promises => promises.map(promise => {
-  //
-  //       const characterName = promise.name;
-  //
-  //       const speciesFetch =
-  //       fetch(promise.species)
-  //       .then(res => res.json())
-  //       .then(data => data.name)
-  //
-  //       const planetFetch =
-  //       fetch(promise.homeworld)
-  //       .then(res => res.json())
-  //       .then(data => {return {planetName: data.name, planetPopulation: data.population}})
-  //
-  //       const filmsPromises =
-  //       promise.films.map(film => {
-  //         return fetch(film)
-  //         .then(res => res.json())
-  //         .then(data => data.title)
-  //       })
-  //
-  //       const filmsFetch =
-  //       Promise.all(filmsPromises)
-  //       .then(data => {return data})
-  //
-  //       return Promise.all([speciesFetch, planetFetch, filmsFetch])
-  //       .then(info => {return {name: characterName, species: info[0], planet: info[1].planetName, population: info[1].planetPopulation, films: info[2]}})
-  //       .then(characterStats => {this.setState({characters: [...this.state.characters, characterStats]})})
-  //     }))
-  //
-  //
-  //   }
-
 
   generateCharacters = () => {
     return this.state.characters.map((character, ind) => {
