@@ -31,14 +31,12 @@ export default class App extends Component {
     getMoviesData()
       .then(movies => {
         this.setState({
-          ...this.state,
           movies,
           sys: {...this.state.sys, isLoaded: true}
         })
       })
       .catch(err => {
         this.setState({
-          ...this.state,
           movies: fakeMovies,
           sys: {...this.state.sys, error: err}
         })
@@ -77,19 +75,18 @@ export default class App extends Component {
 
           <Route path='/movies/:id' render={({ match }) => {
             const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))
-            return (
-              <CharactersPage
-                id={match.params.id}
-                movie={specificMovie}
-                user={this.state.user}
-                logOut={this.logOut}
-                addMovies={this.addMovies}
-                movies={this.state.movies}
-                favorites={this.state.favorites}
-                addFavorite={this.addFavorite}
-                removeFavorite={this.removeFavorite}
-                />
-            )
+
+            return (!specificMovie)
+              ? this.addMovies() 
+              : <CharactersPage
+                  id={match.params.id}
+                  movie={specificMovie}
+                  user={this.state.user}
+                  logOut={this.logOut}
+                  favorites={this.state.favorites}
+                  addFavorite={this.addFavorite}
+                  removeFavorite={this.removeFavorite}
+                  />
           }} />
 
           <Route exact path='/favorites' render={() => <FavoritesPage

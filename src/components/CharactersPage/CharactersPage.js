@@ -11,10 +11,6 @@ export default class CharactersPage extends Component {
     this.state = {}
   }
 
-  componentDidMount = () => {
-    this.props.addMovies()
-  }
-
   render() {
     return !this.props.movie ? null: (
       <section className="characters-page">
@@ -38,7 +34,6 @@ export default class CharactersPage extends Component {
         <CharacterBox
           favorites={this.props.favorites}
           characters={this.props.movie.characters}
-          addMovies={this.props.addMovies}
           addFavorite={this.props.addFavorite}
           removeFavorite={this.props.removeFavorite}
         />
