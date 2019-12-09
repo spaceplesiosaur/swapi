@@ -18,19 +18,19 @@ export default class CharacterBox extends Component {
 
   speciesFetch = (url) => {
     return getAnyData(url, 'species')
-    .then(data => {return {species: data.name}})
+      .then(data => {return {species: data.name}})
   }
 
   planetFetch = (url) => {
     return getAnyData(url, 'planet')
-    .then(data => {return {planet: data.name, population: data.population}})
+      .then(data => {return {planet: data.name, population: data.population}})
   }
 
   filmsFetch = (url) => {
     return Promise.all(url.map((film, index) => {
       return getAnyData(film, `accociated film ${index + 1}`)
-      .then(data => data.title)}))
-      .then(data => {return {films: data}})
+        .then(data => data.title)}))
+        .then(data => {return {films: data}})
     }
 
   nestedCharacterFetch = (promise) => {
@@ -39,9 +39,9 @@ export default class CharacterBox extends Component {
       .then(info => {
         return {name, ...info[0], ...info[1], ...info[2]}
       })
-      .then(characterStats => {
-        this.setState({characters: [...this.state.characters, characterStats]})
-      })
+        .then(characterStats => {
+          this.setState({characters: [...this.state.characters, characterStats]})
+        })
   }
 
   makePromises = (listOfPromises) => {
