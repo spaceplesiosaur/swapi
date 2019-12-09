@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharactersPage should match snapshot if no movie data was passed 1`] = `""`;
-
 exports[`CharactersPage should match snapshot with all data passed in correctly 1`] = `
 <section
   className="characters-page"
 >
   <Header
-    headerText="Episode 1: the fast and the furious"
+    headerText="Episode 1: The Phantom Menace"
     isButton={true}
     logOut={[MockFunction]}
     user={
@@ -24,10 +22,10 @@ exports[`CharactersPage should match snapshot with all data passed in correctly 
     <section>
       <div>
         <h4>
-          the fast and the furious
+          The Phantom Menace
         </h4>
         <p>
-          paaaam-pam paaaaam-pam pa-pa-paaaam
+          Turmoil has engulfed the, Galactic Republic.
         </p>
       </div>
     </section>
@@ -42,73 +40,9 @@ exports[`CharactersPage should match snapshot with all data passed in correctly 
   </div>
   <CharacterBox
     addFavorite={[MockFunction]}
-    addMovies={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      }
-    }
     characters={
       Array [
-        Object {
-          "films": Array [
-            "bambi",
-            "little women",
-            "sound of music",
-          ],
-          "isFavorite": false,
-          "name": "Luke",
-          "planet": "Tatioone",
-          "population": 20000,
-          "species": "human",
-        },
-        Object {
-          "films": Array [
-            "die hard",
-          ],
-          "isFavorite": true,
-          "name": "Leia",
-          "planet": "Alderaan",
-          "population": 230000,
-          "species": "human",
-        },
-        Object {
-          "films": Array [
-            "lawrence of arabia",
-          ],
-          "isFavorite": false,
-          "name": "Obi-wan",
-          "planet": "Whereever he is from",
-          "population": 40000,
-          "species": "human",
-        },
-        Object {
-          "films": Array [
-            "punch drunk love",
-          ],
-          "isFavorite": true,
-          "name": "Darth Vadar",
-          "planet": "Tatioone",
-          "population": 50000,
-          "species": "robot",
-        },
-        Object {
-          "films": Array [
-            "cinderella",
-          ],
-          "isFavorite": false,
-          "name": "Han",
-          "planet": "Millenium Falcon",
-          "population": 60000,
-          "species": "human",
-        },
+        "C-3PO",
       ]
     }
     favorites={Array []}

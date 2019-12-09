@@ -12,30 +12,32 @@ export default class CharactersPage extends Component {
   }
 
   render() {
-    return !this.props.movie ? null: (
+    const { movie, favorites, addFavorite, removeFavorite } = this.props
+    const { episode_id, title, opening_crawl, characters } = movie
+    return (
       <section className="characters-page">
         <Header
           user={this.props.user}
           logOut={this.props.logOut}
-          headerText={`Episode ${this.props.movie.episode_id}: ${this.props.movie.title}`}
+          headerText={`Episode ${episode_id}: ${title}`}
           isButton={true} />
         <main className="crawl-text">
           <section>
             <div>
-              <h4>{this.props.movie.title}</h4>
-              <p>{this.props.movie.opening_crawl}</p>
+              <h4>{title}</h4>
+              <p>{opening_crawl}</p>
             </div>
           </section>
         </main>
         <div>
           <h3>All Movie Characters</h3>
-          <FavoriteFilter number={this.props.favorites.length}/>
+          <FavoriteFilter number={favorites.length}/>
         </div>
         <CharacterBox
-          favorites={this.props.favorites}
-          characters={this.props.movie.characters}
-          addFavorite={this.props.addFavorite}
-          removeFavorite={this.props.removeFavorite}
+          favorites={favorites}
+          characters={characters}
+          addFavorite={addFavorite}
+          removeFavorite={removeFavorite}
         />
       </section>
     )
@@ -47,7 +49,6 @@ CharactersPage.propTypes = {
   movie: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
   logOut: PropTypes.func.isRequired,
-  addMovies: PropTypes.func.isRequired,
   favorites: PropTypes.arrayOf(PropTypes.object),
   addFavorite: PropTypes.func.isRequired,
   removeFavorite: PropTypes.func.isRequired

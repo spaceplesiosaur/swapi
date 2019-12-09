@@ -11,15 +11,19 @@ describe('CharactersPage', () => {
   beforeEach(() => {
     wrapper = shallow(
       <CharactersPage
-        id={2}
-        movie={movieResults[0]}
+        id='2'
+        movie={{
+          title: 'The Phantom Menace',
+          release_date: '1999-05-19',
+          episode_id: 1,
+          opening_crawl: 'Turmoil has engulfed the, Galactic Republic.',
+          characters: ['C-3PO']
+        }}
         user={{
           name: 'Taylor Swift',
           quote: "I find your lack of faith disturbing",
           rank: 'intermediate'}}
         logOut={jest.fn()}
-        addMovies={addMovies}
-        movies={movieResults}
         favorites={[]}
         addFavorite={jest.fn()}
         removeFavorite={jest.fn()}
@@ -29,15 +33,5 @@ describe('CharactersPage', () => {
 
   it('should match snapshot with all data passed in correctly', () => {
     expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should match snapshot if no movie data was passed', () => {
-    const wrapperWithoutProps = shallow(
-      <CharactersPage addMovies={addMovies}/>)
-    expect(wrapperWithoutProps).toMatchSnapshot()
-  })
-
-  it('should call addMovies prop after rendering', () => {
-    expect(addMovies).toHaveBeenCalled()
   })
 })
