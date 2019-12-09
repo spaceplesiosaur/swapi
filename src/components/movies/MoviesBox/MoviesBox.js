@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
+import PropTypes from 'prop-types'
 import './MoviesBox.scss'
 
 export default class MovieBox extends Component {
@@ -29,4 +30,9 @@ export default class MovieBox extends Component {
       </section>
     )
   }
+}
+
+MovieBox.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  addMovies: PropTypes.func.isRequired
 }

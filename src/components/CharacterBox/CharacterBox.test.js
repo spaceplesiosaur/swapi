@@ -14,8 +14,7 @@ describe('CharacterBox', () => {
     wrapper = shallow(
       < CharacterBox
         favorites={[characterResults[1]]}
-        characters={characters}
-        addMovies={jest.fn()}
+        characters={['C-3PO']}
         addFavorite={jest.fn()}
         removeFavorite={jest.fn()}
       />)

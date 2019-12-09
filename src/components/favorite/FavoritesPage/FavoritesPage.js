@@ -2,6 +2,7 @@ import React from 'react'
 import './FavoritesPage.scss';
 import FavoriteCharacters from '../FavoriteCharacters/FavoriteCharacters'
 import Header from '../../Header/Header'
+import PropTypes from 'prop-types'
 
 
 const FavoritesPage = (props) => {
@@ -22,3 +23,10 @@ const FavoritesPage = (props) => {
 
 
 export default FavoritesPage;
+
+FavoritesPage.propTypes = {
+  user: PropTypes.object.isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object),
+  logOut: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired
+}

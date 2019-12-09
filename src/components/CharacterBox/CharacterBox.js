@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CharacterCard from '../CharacterCard/CharacterCard'
 import { getAnyData } from '../../apiCalls/apiCalls'
+import PropTypes from 'prop-types'
 import './CharacterBox.scss'
 
 export default class CharacterBox extends Component {
@@ -83,4 +84,11 @@ export default class CharacterBox extends Component {
       </section>
     )
   }
+}
+
+CharacterBox.propTypes = {
+  favorites: PropTypes.array,
+  characters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  addFavorite: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired,
 }

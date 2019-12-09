@@ -13,6 +13,7 @@ describe('FavoritesPage', () => {
           quote: "I find your lack of faith disturbing",
           rank: 'intermediate'}}
         favorites={[characterResults[1]]}
+        logOut={jest.fn()}
         removeFavorite={jest.fn()}
       />)
 

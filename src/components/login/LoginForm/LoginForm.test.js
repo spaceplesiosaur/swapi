@@ -16,7 +16,7 @@ describe('LoginForm', () => {
 
   it ('should match the snapshot if toMoviesPage state is true', () => {
     form.setState({toMoviesPage: true})
-    
+
     expect(form).toMatchSnapshot()
   })
 
@@ -102,7 +102,8 @@ describe('LoginForm', () => {
 
         form.setState({data: {
           name: 'Yoda',
-          quote: 'Do. Or do not. There is no try.'
+          quote: 'Do. Or do not. There is no try.',
+          rank: 'novice'
         }})
 
         form.instance().submitUser(

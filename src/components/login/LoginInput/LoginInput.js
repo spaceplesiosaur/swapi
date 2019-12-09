@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import './LoginInput.scss'
 
 const LoginInput = ({type, value, toggleChangeState}) => {
@@ -19,3 +20,9 @@ const LoginInput = ({type, value, toggleChangeState}) => {
 }
 
 export default LoginInput
+
+LoginInput.propTypes = {
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  toggleChangeState: PropTypes.func.isRequired
+}
