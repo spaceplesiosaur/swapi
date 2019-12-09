@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CharacterCard from '../CharacterCard/CharacterCard'
-import { getCharacterData } from '../../apiCalls/apiCalls'
+import fakeCharacters from '../../mockData/fakeCharacters.js'
+import { getAnyData } from '../../apiCalls/apiCalls'
 import './CharacterBox.scss'
 
 export default class CharacterBox extends Component {
@@ -11,49 +12,32 @@ export default class CharacterBox extends Component {
     }
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     const limitedCharacters = this.props.characters.slice(0, 10);
-    const characterPromises = getCharacterData(limitedCharacters);
+    const characterPromises = limitedCharacters.map((character, index) => {
+      return getAnyData(character, 'Character');
+    })
 
-    // .catch(err => {
-    //     console.log(err)
-    //     this.setState({characters: [...this.state.characters, character[index]]})
-    //   })
-
-
-    return Promise.all(characterPromises)
+    const makePromises = Promise.all(characterPromises)
       .then(promises => promises.map(promise => {
 
         const characterName = promise.name;
+        const speciesFetch = getAnyData(promise.species, 'Species').then(data => data.name)
+        const planetFetch = getAnyData(promise.homeworld, 'Planet').then(data => {return {planetName: data.name, planetPopulation: data.population}})
+        const filmsFetch = Promise.all(promise.films.map((film, index) => {
+          return getAnyData(film, `accociated film ${index + 1}`)
+          .then(data => data.title)}))
+          .then(data => {return data})
 
-        const speciesFetch =
-        fetch(promise.species)
-        .then(res => res.json())
-        .then(data => data.name)
-
-        const planetFetch =
-        fetch(promise.homeworld)
-        .then(res => res.json())
-        .then(data => {return {planetName: data.name, planetPopulation: data.population}})
-
-        const filmsPromises =
-        promise.films.map(film => {
-          return fetch(film)
-          .then(res => res.json())
-          .then(data => data.title)
-        })
-
-        const filmsFetch =
-        Promise.all(filmsPromises)
-        .then(data => {return data})
 
         return Promise.all([speciesFetch, planetFetch, filmsFetch])
-        .then(info => {return {name: characterName, species: info[0], planet: info[1].planetName, population: info[1].planetPopulation, films: info[2]}})
+        .then(info => {
+          // NOTE: I need scrshot of it
+          console.log('INFOOOO', info)  
+          return {name: characterName, species: info[0], planet: info[1].planetName, population: info[1].planetPopulation, films: info[2]}})
         .then(characterStats => {this.setState({characters: [...this.state.characters, characterStats]})})
-      }))
-
-
-    }
+    }))
+  }
 
   // componentDidMount = () => {
   //   const limitedCharacters = this.props.characters.slice(0, 10)
