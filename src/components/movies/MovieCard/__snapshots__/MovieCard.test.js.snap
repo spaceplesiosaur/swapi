@@ -15,10 +15,10 @@ exports[`MovieCard should render MovieCard 1`] = `
     1
   </h3>
   <h4>
-    2 fast 2 furious
+    The Phantom Menace
   </h4>
   <p>
-    2000
+    1999
   </p>
   <button
     onClick={[Function]}

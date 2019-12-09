@@ -5,14 +5,17 @@ exports[`MoviesBox should render MoviesBox 1`] = `
   className="movie-box"
 >
   <MovieCard
-    director="The Rock"
-    episode_id={4}
+    characters={
+      Array [
+        "C-3PO",
+      ]
+    }
+    episode_id={1}
     id={1}
     key="0"
-    opening_crawl="paaaam-pam paaaaam-pam pa-pa-paaaam"
-    producer="Mr. Tumnus"
-    release_date="1977-05-25"
-    title="A Star War"
+    opening_crawl="Turmoil has engulfed the Galactic Republic."
+    release_date="1999-05-19"
+    title="The Phantom Menace"
   />
 </section>
 `;

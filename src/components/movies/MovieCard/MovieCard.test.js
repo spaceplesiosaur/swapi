@@ -1,6 +1,5 @@
 import React from 'react'
 import MovieCard from './MovieCard'
-import movieResults from '../../../mockData/fakeMovies.js'
 import { shallow } from 'enzyme'
 
 describe("MovieCard", ()=> {
@@ -10,7 +9,11 @@ describe("MovieCard", ()=> {
     wrapper = shallow(
       <MovieCard
         id={1}
-        {...movieResults[1]}
+        title='The Phantom Menace'
+        release_date='1999-05-19'
+        episode_id={1}
+        opening_crawl='Turmoil has engulfed the Galactic Republic.'
+        characters={['C-3PO']}
       />
     )
   });

@@ -8,10 +8,6 @@ describe("MoviesPage", () => {
   it('should render MoviesPage with all data passed in correctly', () => {
     const wrapper = shallow(
       <MoviesPage
-        sys={{
-          isLoaded: true,
-          error: ''
-        }}
         user={{
           name: 'Padme',
           quote: "Rock is smooth",

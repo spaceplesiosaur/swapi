@@ -33,8 +33,6 @@ export default class MovieBox extends Component {
 }
 
 MovieBox.propTypes = {
-  isLoaded: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
   addMovies: PropTypes.func.isRequired
 }

@@ -17,8 +17,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
   />
   <MovieBox
     addMovies={[MockFunction]}
-    error=""
-    isLoaded={true}
     movies={
       Array [
         Object {

@@ -67,7 +67,6 @@ export default class App extends Component {
           <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
 
           <Route exact path='/movies' render={() => <MoviesPage
-            sys={this.state.sys}
             user={this.state.user}
             logOut={this.logOut}
             movies={this.state.movies}
@@ -77,7 +76,7 @@ export default class App extends Component {
             const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))
 
             return (!specificMovie)
-              ? this.addMovies() 
+              ? this.addMovies()
               : <CharactersPage
                   id={match.params.id}
                   movie={specificMovie}

@@ -5,11 +5,11 @@ import './BBAnimated.scss'
 
 class BBAnimated extends Component {
     constructor(){
-        super();
+        super()
 
         this.state = {
             droidX: 0,
-            mouseX: 0,
+            mouseX: 300,
             toTheRight: true,
             speed: 2,
             accelMod: 1
@@ -25,21 +25,21 @@ class BBAnimated extends Component {
 
     // Get moving!
     movement() {
-        let {droidX, mouseX, speed, accelMod} = this.state;
+        let {droidX, mouseX, speed, accelMod} = this.state
 
         // Need a pretty strict if statement to make sure React doesn't end up in a
         // render loop with all the state changes / re-rendering going on.
         if(Math.abs(Math.round(droidX)-mouseX) !== 1){
 
-            let distance = mouseX - droidX;
-            let acceleration = Math.abs(distance * accelMod) / 100;
+            let distance = mouseX - droidX
+            let acceleration = Math.abs(distance * accelMod) / 100
 
             // Move to the right
             if (droidX < mouseX) {
                 this.setState({
                     droidX: droidX+(speed*acceleration),
                     toTheRight: true
-                });
+                })
             }
 
             // Move to the left
@@ -47,32 +47,25 @@ class BBAnimated extends Component {
                 this.setState({
                     droidX: droidX-(speed*acceleration),
                     toTheRight: false
-                });
+                })
             }
         }
     }
 
-    // Get some initial movement on first mount.
-    componentWillMount() {
-        this.setState({
-            mouseX: 300
-        });
-    }
-
     // Set up the mouse event listener and fire up the movement function.
     componentDidMount() {
-        document.addEventListener('mousemove', (e) => this.handleMouseMove(e));
-        setInterval(this.movement.bind(this), 1);
+        document.addEventListener('mousemove', (e) => this.handleMouseMove(e))
+        setInterval(this.movement.bind(this), 1)
     }
 
     // Clean up.
     componentWillUnmount() {
-        document.removeEventListener('mousemove', (e) => this.handleMouseMove(e));
+        document.removeEventListener('mousemove', (e) => this.handleMouseMove(e))
     }
 
     // Away we go.
     render() {
-      let {droidX, mouseX, toTheRight} = this.state;
+      let {droidX, mouseX, toTheRight} = this.state
 
       return (
         <div>
@@ -112,7 +105,7 @@ class BBAnimated extends Component {
             <div className="shadow"></div>
           </div>
         </div>
-      );
+      )
     }
 }
 

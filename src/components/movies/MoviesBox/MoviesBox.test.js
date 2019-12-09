@@ -4,12 +4,11 @@ import MoviesBox from './MoviesBox'
 
 describe("MoviesBox", () => {
   const mockProps = [{
-    title: "A Star War",
-    episode_id: 4,
-    director: "The Rock",
-    producer: "Mr. Tumnus",
-    release_date: "1977-05-25",
-    opening_crawl: "paaaam-pam paaaaam-pam pa-pa-paaaam"
+    title: 'The Phantom Menace',
+    release_date: '1999-05-19',
+    episode_id: 1,
+    opening_crawl: 'Turmoil has engulfed the Galactic Republic.',
+    characters: ['C-3PO']
   }]
 
   const addMovies = jest.fn()

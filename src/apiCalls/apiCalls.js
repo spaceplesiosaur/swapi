@@ -6,8 +6,12 @@ export const getMoviesData = () => {
       }
       return response.json()
     })
-    .then(data => data.results.sort((a, b) => {
+    .then(movies => movies.results.sort((a, b) => {
       return a.episode_id - b.episode_id
+    }))
+    .then(movies => movies.map(movie => {
+      const { title, episode_id, opening_crawl, release_date, characters } = movie
+      return { title, episode_id, opening_crawl, release_date, characters }
     }))
 }
 

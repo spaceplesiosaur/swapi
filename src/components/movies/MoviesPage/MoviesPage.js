@@ -14,7 +14,6 @@ const MoviesPage = (props) => {
         logOut={props.logOut}
       />
       <MoviesBox
-        {...props.sys}
         movies={props.movies}
         addMovies={props.addMovies}
       />
@@ -26,7 +25,6 @@ const MoviesPage = (props) => {
 export default MoviesPage
 
 MoviesPage.propTypes = {
-  sys: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
   logOut: PropTypes.func.isRequired,
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
