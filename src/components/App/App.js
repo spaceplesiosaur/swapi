@@ -8,6 +8,7 @@ import MoviesPage from '../movies/MoviesPage/MoviesPage'
 import CharactersPage from '../CharactersPage/CharactersPage'
 import FavoritesPage from '../favorite/FavoritesPage/FavoritesPage'
 import Page404 from '../Page404/Page404'
+import C3POcatchPage from '../C3POcatchPage/C3POcatchPage'
 
 
 export default class App extends Component {
@@ -21,7 +22,7 @@ export default class App extends Component {
       movies: [ ],
       favorites: [],
       sys: {
-        isLoaded: false,
+        isLoaded: undefined,
         error: ''
       }
     }
@@ -45,7 +46,7 @@ export default class App extends Component {
       .catch(err => {
         this.setState({
           movies: fakeMovies,
-          sys: {...this.state.sys, error: err}
+          sys: {isLoaded: false, error: err}
         })
       })
   }
@@ -73,11 +74,19 @@ export default class App extends Component {
         <Switch>
           <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
 
-          <Route exact path='/movies' render={() => <MoviesPage
-            user={this.state.user}
-            logOut={this.logOut}
-            movies={this.state.movies}
-            addMovies={this.addMovies}/>} />
+          <Route exact path='/movies' render={() => {
+            return (this.state.sys.isLoaded === false) ?
+              <C3POcatchPage /> :
+              <MoviesPage
+                user={this.state.user}
+                logOut={this.logOut}
+                movies={this.state.movies}
+                addMovies={this.addMovies}
+                isLoaded={this.state.sys.isLoaded}
+              />
+          }
+
+          } />
 
           <Route path='/movies/:id' render={({ match }) => {
             const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))

@@ -7,6 +7,10 @@ import BBAnimated from '../../BBAnimated/BBAnimated'
 import ArtooLoading from '../../ArtooLoading/ArtooLoading'
 
 const MoviesPage = (props) => {
+  const chooseRobot = () => {
+    return props.isLoaded === undefined ?
+    <ArtooLoading /> : <BBAnimated />
+  }
   return (
     <section className="moviePage">
       <Header
@@ -18,8 +22,7 @@ const MoviesPage = (props) => {
         movies={props.movies}
         addMovies={props.addMovies}
       />
-      <ArtooLoading />
-      <BBAnimated />
+      {chooseRobot()}
     </section>
   )
 }
@@ -30,5 +33,6 @@ MoviesPage.propTypes = {
   user: PropTypes.object.isRequired,
   logOut: PropTypes.func.isRequired,
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-  addMovies: PropTypes.func.isRequired
+  addMovies: PropTypes.func.isRequired,
+  isLoaded: PropTypes.bool
 }

@@ -1,8 +1,9 @@
+//Animation for this component was inspired by Try Turing Ghost activity: https://codepen.io/spaceplesiosaur/pen/jXrrvM
+
 .artooContainer {
   position: absolute;
   bottom: 7%;
   left: 0;
-  // width: 100px;
   display: flex;
   flex-direction: row;
   animation: float 6s linear infinite;

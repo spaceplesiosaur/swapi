@@ -502,6 +502,6 @@ exports[`MoviesPage should render MoviesPage with all data passed in correctly 1
       ]
     }
   />
-  <BBAnimated />
+  <ArtooLoading />
 </section>
 `;
