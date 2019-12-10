@@ -12,6 +12,10 @@ describe('CharacterBox', () => {
   let wrapper, characters, instance
 
   beforeEach(() => {
+    getAnyData.mockImplementation(() => {
+      return Promise.resolve([{ name: 'C-3PO' }])
+    })
+
     characters = movieResults.map(movie => movie.characters)
 
     wrapper = shallow(
@@ -21,10 +25,22 @@ describe('CharacterBox', () => {
         addFavorite={jest.fn()}
         removeFavorite={jest.fn()}
       />)
+
+    wrapper.setState({isLoaded: true})
     instance = wrapper.instance()
   })
 
   it('should render CharacterBox with all data passed in correctly', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render CharacterBox if data is loading', () => {
+    wrapper.setState({isLoaded: false})
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render error if data was not fetched', () => {
+    wrapper.setState({error: 'error is here!'})
     expect(wrapper).toMatchSnapshot()
   })
 
@@ -46,13 +62,9 @@ describe('CharacterBox', () => {
   })
 
   it('should call getAnyData in all nested functions to fetch api data', () => {
-    getAnyData.mockImplementation(() => {
-      return Promise.resolve([{ name: 'C-3PO' }])
-    })
-
     instance.addCharacters()
 
-    expect(getAnyData).toHaveBeenCalledTimes(5)
+    expect(getAnyData).toHaveBeenCalled()
   })
 
   it('should call makePromises as a nested fetch for addCharacters method', async () => {

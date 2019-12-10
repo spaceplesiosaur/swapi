@@ -35,5 +35,5 @@ MoviesPage.propTypes = {
   logOut: PropTypes.func.isRequired,
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
   addMovies: PropTypes.func.isRequired,
-  isLoaded: PropTypes.bool
+  isLoaded: PropTypes.bool.isRequired
 }

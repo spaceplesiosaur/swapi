@@ -6,7 +6,7 @@ import artoo from '../../images/artoo.png'
 const ArtooLoading = () => {
 
   return (
-    <div class="artooContainer">
+    <div className="artooContainer">
       <p>...Loading</p>
       <img src={artoo} alt="artoo loading" className="artoo"></img>
       <div className='shadow'></div>

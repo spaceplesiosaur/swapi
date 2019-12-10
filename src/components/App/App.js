@@ -9,6 +9,7 @@ import CharactersPage from '../CharactersPage/CharactersPage'
 import FavoritesPage from '../favorite/FavoritesPage/FavoritesPage'
 import Page404 from '../Page404/Page404'
 import C3POcatchPage from '../C3POcatchPage/C3POcatchPage'
+import NoFavoritesPage from '../NoFavoritesPage/NoFavoritesPage'
 
 
 export default class App extends Component {
@@ -106,12 +107,16 @@ export default class App extends Component {
                   />
           }} />
 
-          <Route exact path='/favorites' render={() => <FavoritesPage
-            user={this.state.user}
-            favorites={this.state.favorites}
-            logOut={this.logOut}
-            removeFavorite={this.removeFavorite}
-            />} />
+          <Route exact path='/favorites' render={() => {
+            return (!this.state.favorites.length)
+              ? <NoFavoritesPage />
+              : <FavoritesPage
+                  user={this.state.user}
+                  logOut={this.logOut}
+                  favorites={this.state.favorites}
+                  removeFavorite={this.removeFavorite}
+                  />
+          }} />
 
           <Route path="*" component={Page404} />
         </Switch>

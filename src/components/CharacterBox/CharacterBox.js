@@ -5,33 +5,31 @@ import PropTypes from 'prop-types'
 import './CharacterBox.scss'
 import ArtooLoading from '../ArtooLoading/ArtooLoading'
 import C3POCard from '../C3POCard/C3POCard'
-
 export default class CharacterBox extends Component {
   constructor() {
     super()
     this.state = {
+      fetchNumber: 10,
       characters: [],
       isLoaded: false,
       error: ''
     }
   }
-
   componentDidMount() {
-    this.addCharacters()
+    if (!this.state.characters.length) {
+      this.addCharacters()
+    }
   }
-
   speciesFetch = (url) => {
     return getAnyData(url, 'species')
       .then(data => {return {species: data.name}})
       .catch(error => this.setState({error: error}))
   }
-
   planetFetch = (url) => {
     return getAnyData(url, 'planet')
       .then(data => {return {planet: data.name, population: data.population}})
       .catch(error => this.setState({error: error}))
   }
-
   filmsFetch = (url) => {
     return Promise.all(url.map((film, index) => {
       return getAnyData(film, `accociated film ${index + 1}`)
@@ -39,7 +37,6 @@ export default class CharacterBox extends Component {
         .then(data => {return {films: data}})
         .catch(error => this.setState({error: error}))
     }
-
   nestedCharacterFetch = (promise) => {
     const { name, species, films, homeworld} = promise
     return Promise.all([
@@ -54,25 +51,22 @@ export default class CharacterBox extends Component {
         this.setState({characters: [...this.state.characters, characterStats], isLoaded: true})
       })
   }
-
   makePromises = (listOfPromises) => {
     return Promise.all(listOfPromises)
       .then(promises => promises.map(promise => {
         return this.nestedCharacterFetch(promise)
       }))
     }
-
   addCharacters = () => {
-    const limitedCharacters = this.props.characters.slice(0, 10);
-    const characterPromises = limitedCharacters.map((character, index) => {
+    const characterPromises = this.props.characters.map((character, index) => {
       return getAnyData(character, 'Character')
         .catch(error => this.setState({error: error}))
     })
     this.makePromises(characterPromises )
   }
-
   generateCharacters = () => {
-    return this.state.characters.map((character, ind) => {
+    const limitedCharacters = this.state.characters.filter((chrt, ind) => (this.state.fetchNumber-10) <= ind && ind < this.state.fetchNumber)
+    return limitedCharacters.map((character, ind) => {
       const isFavorite = !!this.props.favorites.find(fav => fav.name === character.name)
       return (
         <CharacterCard
@@ -85,6 +79,13 @@ export default class CharacterBox extends Component {
     )
     })
   }
+  increaseFetchNumber = () => {
+    this.setState({fetchNumber: this.state.fetchNumber + 10})
+  }
+
+  decreaseFetchNumber = () => {
+    this.setState({fetchNumber: this.state.fetchNumber - 10})
+  }
 
   render() {
     return (
@@ -95,11 +96,21 @@ export default class CharacterBox extends Component {
             ? this.generateCharacters()
             : <ArtooLoading />
           }
+          <div className="button-set">
+            {
+              this.state.fetchNumber > 10 &&
+              (<button onClick={this.decreaseFetchNumber}>less</button>)
+            }
+            {
+              this.state.characters &&
+              this.state.fetchNumber <= this.state.characters.length &&
+              (<button onClick={this.increaseFetchNumber}>more</button>)
+            }
+          </div>
         </section>
     )
   }
 }
-
 CharacterBox.propTypes = {
   favorites: PropTypes.array,
   characters: PropTypes.arrayOf(PropTypes.string).isRequired,
