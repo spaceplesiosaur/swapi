@@ -14,7 +14,7 @@ describe("LoginRadioButton", () => {
       toggleChangeState: toggleChangeState
     }
     radio = shallow(<LoginRadioButton {...mockProps} />)
-  });
+  })
 
   it ('should match the snapshot with all data passed in correctly', () => {
     expect(radio).toMatchSnapshot()
@@ -24,8 +24,8 @@ describe("LoginRadioButton", () => {
     radio.find('input').simulate(
       'change',
       { target: { value: 'novice'}
-    });
+    })
 
-    expect(toggleChangeState).toHaveBeenCalled();
-  });
-});
+    expect(toggleChangeState).toHaveBeenCalled()
+  })
+})

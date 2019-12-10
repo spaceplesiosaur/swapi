@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './UserProfile.scss'
@@ -36,7 +36,7 @@ class UserProfile extends Component {
 }
 
 
-export default UserProfile;
+export default UserProfile
 
 UserProfile.propTypes = {
   name: PropTypes.string.isRequired,

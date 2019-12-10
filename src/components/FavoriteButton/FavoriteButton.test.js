@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import FavoriteButton from './FavoriteButton'
 
 describe('FavoriteButton', () => {
-  let wrapper;
+  let wrapper
   const addFavorite = jest.fn()
   const removeFavorite = jest.fn()
   const toggleCard = jest.fn()

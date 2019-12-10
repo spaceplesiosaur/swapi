@@ -23,19 +23,16 @@ export default class CharacterBox extends Component {
   speciesFetch = (url) => {
     return getAnyData(url, 'species')
       .then(data => {return {species: data.name}})
-      .catch(error => this.setState({error: error}))
   }
   planetFetch = (url) => {
     return getAnyData(url, 'planet')
       .then(data => {return {planet: data.name, population: data.population}})
-      .catch(error => this.setState({error: error}))
   }
   filmsFetch = (url) => {
     return Promise.all(url.map((film, index) => {
       return getAnyData(film, `accociated film ${index + 1}`)
         .then(data => data.title)}))
         .then(data => {return {films: data}})
-        .catch(error => this.setState({error: error}))
     }
   nestedCharacterFetch = (promise) => {
     const { name, species, films, homeworld} = promise
@@ -60,7 +57,6 @@ export default class CharacterBox extends Component {
   addCharacters = () => {
     const characterPromises = this.props.characters.map((character, index) => {
       return getAnyData(character, 'Character')
-        .catch(error => this.setState({error: error}))
     })
     this.makePromises(characterPromises )
   }
@@ -99,12 +95,12 @@ export default class CharacterBox extends Component {
           <div className="button-set">
             {
               this.state.fetchNumber > 10 &&
-              (<button onClick={this.decreaseFetchNumber}>less</button>)
+              (<button id="less-btn" onClick={this.decreaseFetchNumber}>less</button>)
             }
             {
               this.state.characters &&
               this.state.fetchNumber <= this.state.characters.length &&
-              (<button onClick={this.increaseFetchNumber}>more</button>)
+              (<button id="more-btn" onClick={this.increaseFetchNumber}>more</button>)
             }
           </div>
         </section>

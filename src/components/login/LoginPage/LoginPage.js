@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import LoginForm from '../LoginForm/LoginForm'
 import PropTypes from 'prop-types'
-import './LoginPage.scss';
+import './LoginPage.scss'
 
 const LoginPage = ({addUser}) => {
 
@@ -12,7 +12,7 @@ const LoginPage = ({addUser}) => {
   )
 }
 
-export default LoginPage;
+export default LoginPage
 
 LoginPage.propTypes = {
   addUser: PropTypes.func.isRequired

@@ -24,13 +24,13 @@ export default class LoginForm extends Component {
     switch (type) {
       case 'name':
         this.setState({data: {...this.state.data, name: value}, error: false})
-        break;
+        break
       case 'favorite quote':
         this.setState({data: {...this.state.data, quote: value}, error: false})
-        break;
+        break
       default:
         this.setState({data: {...this.state.data, rank: value}, error: false})
-        break;
+        break
     }
   }
 

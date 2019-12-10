@@ -79,7 +79,7 @@ describe('CharacterBox', () => {
 
   it('should call nestedCharacterFetch as a nested fetch for makePromises method', async () => {
     const mockSpecies = async () => {
-      return {species: 'human'};
+      return {species: 'human'}
     }
 
     const spy = jest.spyOn(instance, 'nestedCharacterFetch').mockImplementation(() => {
@@ -132,5 +132,21 @@ describe('CharacterBox', () => {
 
       expect(spy).toHaveBeenCalled()
     })
+  })
+
+  it('should update fetchNumber state when increaseFetchNumber is called', async () => {
+    expect(wrapper.state('fetchNumber')).toEqual(10)
+
+    instance.increaseFetchNumber()
+
+    expect(wrapper.state('fetchNumber')).toEqual(20)
+  })
+
+  it('should update fetchNumber state when decreaseFetchNumber is called', async () => {
+    expect(wrapper.state('fetchNumber')).toEqual(10)
+
+    instance.decreaseFetchNumber()
+
+    expect(wrapper.state('fetchNumber')).toEqual(0)
   })
 })

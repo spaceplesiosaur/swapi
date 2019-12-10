@@ -14,4 +14,4 @@ const ArtooLoading = () => {
   )
 }
 
-export default ArtooLoading;
+export default ArtooLoading
