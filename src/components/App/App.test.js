@@ -3,7 +3,7 @@ import App from './App'
 import characterResults from '../../mockData/fakeCharacters.js'
 import { shallow } from 'enzyme'
 import { BrowserRouter } from 'react-router-dom'
-import { getMoviesData } from '../../apiCalls/apiCalls'
+import { getAnyData } from '../../apiCalls/apiCalls'
 
 jest.mock('../../apiCalls/apiCalls')
 
@@ -19,13 +19,13 @@ describe("App", () => {
   })
 
   it('should call function to fetch api data', () => {
-    getMoviesData.mockImplementation(() => {
+    getAnyData.mockImplementation(() => {
       return Promise.resolve([{ title: 'movie one' }])
     })
 
     wrapper.instance().addMovies()
 
-    expect(getMoviesData).toHaveBeenCalled()
+    expect(getAnyData).toHaveBeenCalled()
   })
 
   it('should update state with new user when addUser is called', () => {
