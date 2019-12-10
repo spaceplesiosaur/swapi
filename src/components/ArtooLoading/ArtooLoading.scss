@@ -1,0 +1,25 @@
+.artooContainer {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  animation: float 7s linear infinite;
+  p {
+    color: #5A2C05;
+    font-size: 2em;
+    font-weight: bold;
+    align-self: center;
+  }
+}
+
+.artoo {
+  height: 120px;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0%);
+  }
+  100%{
+    transform: translate(1700%);
+  }
+}

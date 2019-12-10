@@ -4,6 +4,7 @@ import MoviesBox from '../MoviesBox/MoviesBox'
 import PropTypes from 'prop-types'
 import './MoviesPage.scss'
 import BBAnimated from '../../BBAnimated/BBAnimated'
+import ArtooLoading from '../../ArtooLoading/ArtooLoading'
 
 const MoviesPage = (props) => {
   return (
@@ -17,6 +18,7 @@ const MoviesPage = (props) => {
         movies={props.movies}
         addMovies={props.addMovies}
       />
+      <ArtooLoading />
       <BBAnimated />
     </section>
   )
