@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.scss'
 import fakeMovies from '../../mockData/fakeMovies.js'
-import { getMoviesData } from '../../apiCalls/apiCalls'
+import { getAnyData } from '../../apiCalls/apiCalls'
 import LoginPage from '../login/LoginPage/LoginPage'
 import MoviesPage from '../movies/MoviesPage/MoviesPage'
 import CharactersPage from '../CharactersPage/CharactersPage'
@@ -28,7 +28,14 @@ export default class App extends Component {
   }
 
   addMovies = () => {
-    getMoviesData()
+    getAnyData('https://swapi.co/api/films/', 'Movies')
+      .then(movies => movies.results.sort((a, b) => {
+        return a.episode_id - b.episode_id
+      }))
+      .then(movies => movies.map(movie => {
+        const { title, episode_id, opening_crawl, release_date, characters } = movie
+        return { title, episode_id, opening_crawl, release_date, characters }
+      }))
       .then(movies => {
         this.setState({
           movies,
