@@ -1,0 +1,17 @@
+.threepioContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fetchError {
+  color: #5A2C05;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.threepioImage {
+  width: 19%;
+  padding: 2em;
+}
