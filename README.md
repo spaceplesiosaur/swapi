@@ -43,25 +43,23 @@ Tasks:
 ## Demo
 Logging in:
 
-!()[https://p99.f4.n0.cdn.getcloudapp.com/items/5zuJDQ76/Screen+Recording+2019-12-10+at+04.46+PM.gif?v=f225ac9b37cff4337905c0b605d3849a]
+![](https://p99.f4.n0.cdn.getcloudapp.com/items/5zuJDQ76/Screen+Recording+2019-12-10+at+04.46+PM.gif?v=f225ac9b37cff4337905c0b605d3849a)
 
 Movie page:
 
-!()[https://p99.f4.n0.cdn.getcloudapp.com/items/8LuwdXdn/Screen+Recording+2019-12-10+at+04.46+PM.gif?v=1d39493fcf748f4552fb9ead2c3b82ca]
+![](https://p99.f4.n0.cdn.getcloudapp.com/items/8LuwdXdn/Screen+Recording+2019-12-10+at+04.46+PM.gif?v=1d39493fcf748f4552fb9ead2c3b82ca)
 
 Character page:
 
-!()[https://p99.f4.n0.cdn.getcloudapp.com/items/p9u5jWzg/Screen+Recording+2019-12-10+at+04.47+PM.gif?v=9b790ec0fdfec274126f9837ebc10ee1]
+![](https://p99.f4.n0.cdn.getcloudapp.com/items/p9u5jWzg/Screen+Recording+2019-12-10+at+04.47+PM.gif?v=9b790ec0fdfec274126f9837ebc10ee1)
 
 Favorites page:
 
-!()[https://p99.f4.n0.cdn.getcloudapp.com/items/jkunJxyp/Screen+Recording+2019-12-10+at+04.48+PM.gif?v=69758070b1314b83b6112b90e47e1885]
+![](https://p99.f4.n0.cdn.getcloudapp.com/items/jkunJxyp/Screen+Recording+2019-12-10+at+04.48+PM.gif?v=69758070b1314b83b6112b90e47e1885)
 
 Logging out:
 
-!()[https://p99.f4.n0.cdn.getcloudapp.com/items/NQuvd8e2/Screen+Recording+2019-12-10+at+04.48+PM.gif?v=0dd9b8f8c3c7e1c7e90c23ee45f9f4a2]
-
-![What is new app](https://i.makeagif.com/media/11-23-2019/vR-jSy.gif)
+![](https://p99.f4.n0.cdn.getcloudapp.com/items/NQuvd8e2/Screen+Recording+2019-12-10+at+04.48+PM.gif?v=0dd9b8f8c3c7e1c7e90c23ee45f9f4a2)
 
 Note: All Star Wars images come from uihere.com
 
