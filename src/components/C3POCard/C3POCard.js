@@ -6,7 +6,7 @@ import threepio from '../../images/c3po.svg'
 const C3POCard = () => {
   return (
     <div className="c3po-card">
-      <img src={threepio} className="threepioImage"></img>
+      <img src={threepio} className="threepioImage" alt="C-3PO"></img>
       <p className="fetchError">"Oh dear! Something has failed to fetch.  How awful!  We’re doomed."</p>
     </div>
   )

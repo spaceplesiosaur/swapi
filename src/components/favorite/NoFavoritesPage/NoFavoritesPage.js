@@ -5,9 +5,9 @@ import yoda from '../../../images/yoda.png'
 
 const NoFavoritesPage = () => {
   return (
-    <div class="yodaContainer">
-    <h2 class="no-favorites">Add some favorites, you must.</h2>
-    <img src={yoda} class="yoda"></img>
+    <div className="yodaContainer">
+    <h2 className="no-favorites">Add some favorites, you must.</h2>
+    <img src={yoda} className="yoda" alt="yoda"></img>
   </div>)
 }
 

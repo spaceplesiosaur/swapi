@@ -8,7 +8,7 @@ const ArtooLoading = () => {
   return (
     <div class="artooContainer">
       <p>...Loading</p>
-      <img src={artoo} alt="artoo loading image" className="artoo"></img>
+      <img src={artoo} alt="artoo loading" className="artoo"></img>
       <div className='shadow'></div>
     </div>
   )

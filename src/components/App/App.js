@@ -89,9 +89,7 @@ export default class App extends Component {
           } />
 
           <Route path='/movies/:id' render={({ match }) => {
-            if (match.params.id > 7) {
-              return <Page404 />
-            }
+            if (match.params.id > 7) { return <Page404 /> }
 
             const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))
 

@@ -6,7 +6,7 @@ import threepio from '../../images/c3po.png'
 const C3POcatchPage = () => {
   return (
     <div className="threepioContainer">
-      <img src={threepio} className="threepioImage"></img>
+      <img src={threepio} className="threepioImage" alt="C-3PO"></img>
       <p className="fetchError">"Oh dear! Something has failed to fetch.  How awful!  We’re doomed."</p>
     </div>
   )
