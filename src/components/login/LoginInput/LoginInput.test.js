@@ -15,7 +15,7 @@ describe("LoginInput", () => {
     }
 
     input = shallow(<LoginInput {...mockProps} />)
-  });
+  })
 
   it ('should match the snapshot with all data passed in correctly', () => {
     expect(input).toMatchSnapshot()
@@ -25,8 +25,8 @@ describe("LoginInput", () => {
     input.find('input').simulate(
       'change',
       { target: { value: 'Yoda'}
-    });
+    })
 
-    expect(toggleChangeState).toHaveBeenCalled();
-  });
-});
+    expect(toggleChangeState).toHaveBeenCalled()
+  })
+})

@@ -1,7 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CharacterBox should render CharacterBox if data is loading 1`] = `
+<section
+  className="character-box"
+>
+  <ArtooLoading />
+  <div
+    className="button-set"
+  />
+</section>
+`;
+
 exports[`CharacterBox should render CharacterBox with all data passed in correctly 1`] = `
 <section
   className="character-box"
-/>
+>
+  <div
+    className="button-set"
+  />
+</section>
 `;
+
+exports[`CharacterBox should render error if data was not fetched 1`] = `<C3POCard />`;

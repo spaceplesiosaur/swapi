@@ -1,6 +1,6 @@
 import React from 'react'
 import './NoFavoritesPage.scss'
-import yoda from '../../../images/yoda.png'
+import yoda from '../../images/yoda.png'
 //image was taken from uihere.com free clipart https://www.uihere.com/free-cliparts/yoda-count-dooku-luke-skywalker-anakin-skywalker-c-3po-wars-clipart-2869780
 
 const NoFavoritesPage = () => {

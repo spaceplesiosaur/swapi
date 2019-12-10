@@ -16,7 +16,7 @@ describe("MovieCard", ()=> {
         characters={['C-3PO']}
       />
     )
-  });
+  })
 
   it('should render MovieCard', () => {
     expect(wrapper).toMatchSnapshot()

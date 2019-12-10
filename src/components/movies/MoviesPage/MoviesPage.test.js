@@ -15,6 +15,23 @@ describe("MoviesPage", () => {
         logOut={jest.fn()}
         movies={movieResults}
         addMovies={jest.fn()}
+        isLoaded={true}
+      />)
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render MoviesPage if data is loading', () => {
+    const wrapper = shallow(
+      <MoviesPage
+        user={{
+          name: 'Padme',
+          quote: "Rock is smooth",
+          rank: 'expert'}}
+        logOut={jest.fn()}
+        movies={movieResults}
+        addMovies={jest.fn()}
+        isLoaded={false}
       />)
 
     expect(wrapper).toMatchSnapshot()
