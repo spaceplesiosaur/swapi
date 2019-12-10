@@ -8,8 +8,9 @@ import ArtooLoading from '../../ArtooLoading/ArtooLoading'
 
 const MoviesPage = (props) => {
   const chooseRobot = () => {
-    return props.isLoaded === undefined ?
-    <ArtooLoading /> : <BBAnimated />
+    return (!props.isLoaded)
+      ? <ArtooLoading />
+      : <BBAnimated />
   }
   return (
     <section className="moviePage">

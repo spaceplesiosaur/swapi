@@ -3,12 +3,16 @@ import CharacterCard from '../CharacterCard/CharacterCard'
 import { getAnyData } from '../../apiCalls/apiCalls'
 import PropTypes from 'prop-types'
 import './CharacterBox.scss'
+import ArtooLoading from '../ArtooLoading/ArtooLoading'
+import C3POCard from '../C3POCard/C3POCard'
 
 export default class CharacterBox extends Component {
   constructor() {
     super()
     this.state = {
-      characters: []
+      characters: [],
+      isLoaded: false,
+      error: ''
     }
   }
 
@@ -19,11 +23,13 @@ export default class CharacterBox extends Component {
   speciesFetch = (url) => {
     return getAnyData(url, 'species')
       .then(data => {return {species: data.name}})
+      .catch(error => this.setState({error: error}))
   }
 
   planetFetch = (url) => {
     return getAnyData(url, 'planet')
       .then(data => {return {planet: data.name, population: data.population}})
+      .catch(error => this.setState({error: error}))
   }
 
   filmsFetch = (url) => {
@@ -31,6 +37,7 @@ export default class CharacterBox extends Component {
       return getAnyData(film, `accociated film ${index + 1}`)
         .then(data => data.title)}))
         .then(data => {return {films: data}})
+        .catch(error => this.setState({error: error}))
     }
 
   nestedCharacterFetch = (promise) => {
@@ -44,7 +51,7 @@ export default class CharacterBox extends Component {
         return {name, ...info[0], ...info[1], ...info[2]}
       })
       .then(characterStats => {
-        this.setState({characters: [...this.state.characters, characterStats]})
+        this.setState({characters: [...this.state.characters, characterStats], isLoaded: true})
       })
   }
 
@@ -58,7 +65,8 @@ export default class CharacterBox extends Component {
   addCharacters = () => {
     const limitedCharacters = this.props.characters.slice(0, 10);
     const characterPromises = limitedCharacters.map((character, index) => {
-      return getAnyData(character, 'Character');
+      return getAnyData(character, 'Character')
+        .catch(error => this.setState({error: error}))
     })
     this.makePromises(characterPromises )
   }
@@ -80,9 +88,14 @@ export default class CharacterBox extends Component {
 
   render() {
     return (
-      <section className="character-box">
-        {this.generateCharacters()}
-      </section>
+      (this.state.error !== '')
+        ? <C3POCard />
+        : <section className="character-box">
+          {(this.state.isLoaded)
+            ? this.generateCharacters()
+            : <ArtooLoading />
+          }
+        </section>
     )
   }
 }

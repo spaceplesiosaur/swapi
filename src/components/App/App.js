@@ -22,7 +22,7 @@ export default class App extends Component {
       movies: [ ],
       favorites: [],
       sys: {
-        isLoaded: undefined,
+        isLoaded: false,
         error: ''
       }
     }
@@ -75,9 +75,9 @@ export default class App extends Component {
           <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
 
           <Route exact path='/movies' render={() => {
-            return (this.state.sys.isLoaded === false) ?
-              <C3POcatchPage /> :
-              <MoviesPage
+            return (this.state.sys.error !== '')
+              ? <C3POcatchPage />
+              : <MoviesPage
                 user={this.state.user}
                 logOut={this.logOut}
                 movies={this.state.movies}
@@ -89,6 +89,10 @@ export default class App extends Component {
           } />
 
           <Route path='/movies/:id' render={({ match }) => {
+            if (match.params.id > 7) {
+              return <Page404 />
+            }
+
             const specificMovie = this.state.movies.find(info => info.episode_id === parseInt(match.params.id))
 
             return (!specificMovie)
