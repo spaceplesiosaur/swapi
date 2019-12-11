@@ -1,4 +1,4 @@
- 
+
 
 # SWAPI (Star Wars API)
 
@@ -43,23 +43,23 @@ Tasks:
 ## Demo
 Logging in:
 
-![](https://p99.f4.n0.cdn.getcloudapp.com/items/5zuJDQ76/Screen+Recording+2019-12-10+at+04.46+PM.gif?v=f225ac9b37cff4337905c0b605d3849a)
+![](/screenshots/login.gif)
 
 Movie page:
 
-![](https://p99.f4.n0.cdn.getcloudapp.com/items/8LuwdXdn/Screen+Recording+2019-12-10+at+04.46+PM.gif?v=1d39493fcf748f4552fb9ead2c3b82ca)
+![](/screenshots/movies.gif)
 
 Character page:
 
-![](https://p99.f4.n0.cdn.getcloudapp.com/items/p9u5jWzg/Screen+Recording+2019-12-10+at+04.47+PM.gif?v=9b790ec0fdfec274126f9837ebc10ee1)
+![](/screenshots/characters.gif)
 
 Favorites page:
 
-![](https://p99.f4.n0.cdn.getcloudapp.com/items/jkunJxyp/Screen+Recording+2019-12-10+at+04.48+PM.gif?v=69758070b1314b83b6112b90e47e1885)
+![](/screenshots/favorites.gif)
 
 Logging out:
 
-![](https://p99.f4.n0.cdn.getcloudapp.com/items/NQuvd8e2/Screen+Recording+2019-12-10+at+04.48+PM.gif?v=0dd9b8f8c3c7e1c7e90c23ee45f9f4a2)
+![](/screenshots/logout.gif)
 
 Note: All Star Wars images come from uihere.com
 
@@ -70,4 +70,3 @@ The R2D2 loading animation was taken from a Try Turing project
 ## License
 
 All credit goes to Turing School of Software for providing the project specifications and website design.
-
