@@ -43,23 +43,23 @@ Tasks:
 ## Demo
 Logging in:
 
-![](/screenshots/login.gif)
+![](./screenshots/login.gif)
 
 Movie page:
 
-![](/screenshots/movies.gif)
+![](./screenshots/movies.gif)
 
 Character page:
 
-![](/screenshots/characters.gif)
+![](./screenshots/characters.gif)
 
 Favorites page:
 
-![](/screenshots/favorites.gif)
+![](./screenshots/favorites.gif)
 
 Logging out:
 
-![](/screenshots/logout.gif)
+![](./screenshots/logout.gif)
 
 Note: All Star Wars images come from uihere.com
 
