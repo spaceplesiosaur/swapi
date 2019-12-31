@@ -2,20 +2,22 @@
   "name": "swapi",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rayredgoose.github.io/swapi",
   "dependencies": {
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js --ignore-pattern node_modules/ --ignore-pattern src/serviceWorker.js"
+    "lint": "eslint src/**/*.js --ignore-pattern node_modules/ --ignore-pattern src/serviceWorker.js",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,7 +41,8 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
-    "eslint-config-airbnb": "^18.0.1"
+    "eslint-config-airbnb": "^18.0.1",
+    "gh-pages": "^2.1.1"
   },
   "jest": {
     "snapshotSerializers": [
