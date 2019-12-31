@@ -61,6 +61,10 @@ Logging out:
 
 ![](./screenshots/logout.gif)
 
+Page 404:
+
+![](./screenshots/page404.gif)
+
 Note: All Star Wars images come from uihere.com
 
 Much of the base CSS for BB-8 is credit to this Pen by Mike Dixon: https://codepen.io/mdixondesigns/pen/PPEJwz, which was the original inspiration for https://codepen.io/bullerb/pen/gMpxNZ by Brad Colthurst!
