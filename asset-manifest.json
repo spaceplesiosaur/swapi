@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/swapi/static/css/main.ddec2531.chunk.css",
+    "main.js": "/swapi/static/js/main.231273ff.chunk.js",
+    "main.js.map": "/swapi/static/js/main.231273ff.chunk.js.map",
+    "runtime-main.js": "/swapi/static/js/runtime-main.6715cd0d.js",
+    "runtime-main.js.map": "/swapi/static/js/runtime-main.6715cd0d.js.map",
+    "static/js/2.2d56db04.chunk.js": "/swapi/static/js/2.2d56db04.chunk.js",
+    "static/js/2.2d56db04.chunk.js.map": "/swapi/static/js/2.2d56db04.chunk.js.map",
+    "index.html": "/swapi/index.html",
+    "precache-manifest.1487253b6d939d60f362ba71e86f88d6.js": "/swapi/precache-manifest.1487253b6d939d60f362ba71e86f88d6.js",
+    "service-worker.js": "/swapi/service-worker.js",
+    "static/css/main.ddec2531.chunk.css.map": "/swapi/static/css/main.ddec2531.chunk.css.map",
+    "static/media/artoo.png": "/swapi/static/media/artoo.021bc124.png",
+    "static/media/BackButton.scss": "/swapi/static/media/back.73ef8954.svg",
+    "static/media/App.scss": "/swapi/static/media/bg-image.3cd15661.jpg",
+    "static/media/c3po.png": "/swapi/static/media/c3po.0ba9d8ec.png",
+    "static/media/c3po.svg": "/swapi/static/media/c3po.e0ad04f4.svg",
+    "static/media/death-star.svg": "/swapi/static/media/death-star.867d908a.svg",
+    "static/media/full-star.svg": "/swapi/static/media/full-star.d8f1ad15.svg",
+    "static/media/hand.svg": "/swapi/static/media/hand.c49307c6.svg",
+    "static/media/CharacterCard.scss": "/swapi/static/media/st.571f0ecd.svg",
+    "static/media/obiWan.svg": "/swapi/static/media/obiWan.5ac0ff3e.svg",
+    "static/media/CharactersPage.scss": "/swapi/static/media/space.8981c66a.jpg",
+    "static/media/star.svg": "/swapi/static/media/star.818c99aa.svg",
+    "static/media/yoda.png": "/swapi/static/media/yoda.adf6c305.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6715cd0d.js",
+    "static/js/2.2d56db04.chunk.js",
+    "static/css/main.ddec2531.chunk.css",
+    "static/js/main.231273ff.chunk.js"
+  ]
+}
