@@ -8,6 +8,10 @@ This is application designed by was built with `create-react-app`.
 
 Raisa Primerova and Allie McCarthy
 
+## Overview 
+
+SWAPI is an app that contains information about Star Wars movies and characters. 
+
 ### Set Up
 
 Clone the repo. Run npm install to ensure all dependencies are running. Enjoy!
