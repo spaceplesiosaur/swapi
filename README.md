@@ -4,7 +4,7 @@
 
 This is application designed by was built with `create-react-app`.
 
-# Group Members
+## Group Members
 
 Raisa Primerova and Allie McCarthy
 
