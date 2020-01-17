@@ -73,6 +73,7 @@ export default class App extends Component {
     return (
       <main className="app">
         <Switch>
+
           <Route exact path='/' render={() => <LoginPage addUser={this.addUser}/>} />
 
           <Route exact path='/movies' render={() => {
@@ -119,6 +120,7 @@ export default class App extends Component {
           }} />
 
           <Route path="*" component={Page404} />
+
         </Switch>
       </main>
     )

@@ -36,6 +36,7 @@ export default class CharacterBox extends Component {
     }
   nestedCharacterFetch = (promise) => {
     const { name, species, films, homeworld} = promise
+
     return Promise.all([
       this.speciesFetch(species),
       this.planetFetch(homeworld),

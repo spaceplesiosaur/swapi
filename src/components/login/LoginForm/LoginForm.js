@@ -31,7 +31,7 @@ export default class LoginForm extends Component {
       default:
         this.setState({data: {...this.state.data, rank: value}, error: false})
         break
-    }
+      }
   }
 
   submitUser = (event) => {
