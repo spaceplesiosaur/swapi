@@ -2,7 +2,7 @@
   "name": "swapi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rayredgoose.github.io/swapi",
+  "homepage": "https://spaceplesiosaur.github.io/swapi",
   "dependencies": {
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
@@ -42,7 +42,7 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
     "eslint-config-airbnb": "^18.0.1",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.2.0"
   },
   "jest": {
     "snapshotSerializers": [
